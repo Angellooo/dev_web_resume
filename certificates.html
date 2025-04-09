@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Certificate Slider</title>
+  <!-- Font Awesome Library for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css">
+  <!-- Swiper Library Styles -->
+  <link rel="stylesheet" href="css/swiper-bundle.min.css">
+  <!-- Custom Swiper Styles -->
+  <link rel="stylesheet" href="css/swiper.css">
+</head>
+<body>
+  <section id="certificates-section">
+    <!-- Left container: Certificate provider info -->
+    <aside class="left-container">
+      <div id="provider-bg"></div>
+      <div id="provider-logo">
+          <img src="images/testing/brands/ibm_logo.svg" alt="Provider Logo">
+      </div>
+      <div id="provider-info">
+        <h2 id="provider-name" alt="Provider Name">IBM</h2> <!-- Added provider name -->
+        <p id="provider-description" alt="Provider Description">IBM is an American multinational technology company headquartered in Armonk, New York and present in over 175 countries. Is the largest industrial research organization in the world, providing certifications that validate expertise in cutting-edge technologies.</p>
+      </div>
+    </aside>
+
+    <!-- Right container: Swiper slider -->
+    <div class="right-container">
+      <div class="card__container swiper">
+          <div class="card__content">
+            <div class="swiper-wrapper">
+                <article class="card__article swiper-slide" data-provider="IBM">
+                  <div class="card__image">
+                      <img src="./images/testing/certificates/ibm-back-end-application-development-capstone-project-badge.png" alt="IBM Back-End Application Development Capstone Project Badge" class="card__img">
+                      <div class="card__shadow"></div>
+                  </div>
+    
+                  <div class="card__data">
+                      <h3 class="card__name">IBM Back-End Application Development Capstone Project</h3>
+                      <p class="card__description">
+                        This project is the culmination of the Back-End Application Development Professional Certificate.
+                      </p>
+    
+                      <a href="index.html" class="card__button">View More</a>
+                  </div>
+                </article>
+    
+                <article class="card__article swiper-slide" data-provider="UPenn">
+                  <div class="card__image">
+                      <img src="./images/testing/certificates/upenn_english-for-career-development-certificate.png" alt="University of Pennsylvania English for Career Development Certificate" class="card__img">
+                      <div class="card__shadow"></div>
+                  </div>
+    
+                  <div class="card__data">
+                      <h3 class="card__name">English for Career Development</h3>
+                      <p class="card__description">
+                        Certificate provided by the University of Pennsylvania that validates English expertise for Career Development.
+                      </p>
+    
+                      <a href="#" class="card__button">View More</a>
+                  </div>
+                </article>
+    
+                <article class="card__article swiper-slide" data-provider="IBM">
+                  <div class="card__image">
+                      <img src="./images/testing/certificates/ibm-python-for-data-science-and-ai-badge.png" alt="IBM Python for Data Science and AI badge" class="card__img">
+                      <div class="card__shadow"></div>
+                  </div>
+    
+                  <div class="card__data">
+                      <h3 class="card__name">Python for Data Science and AI</h3>
+                      <p class="card__description">
+                        Certificate provided by IBM that validates Python expertise for Data Science and AI.
+                      </p>
+    
+                      <a href="#" class="card__button">View More</a>
+                  </div>
+                </article>
+    
+                <article class="card__article swiper-slide" data-provider="IBM">
+                  <div class="card__image">
+                      <img src="./images/testing/certificates/ibm-back-end-professional-certificate.png" alt="IBM Back-End Professional Certificate" class="card__img">
+                      <div class="card__shadow"></div>
+                  </div>
+    
+                  <div class="card__data">
+                      <h3 class="card__name">IBM Back-End Professional Certificate</h3>
+                      <p class="card__description">
+                        Professional Certificate provided by IBM that validates expertise in Back-End Development.
+                      </p>
+    
+                      <a href="#" class="card__button">View More</a>
+                  </div>
+                </article>
+
+                <article class="card__article swiper-slide" data-provider="IBM">
+                  <div class="card__image">
+                      <img src="./images/testing/certificates/ibm-applied-software-engineering-fundamentals-badge.png" alt="IBM Applied Software Engineering Fundamentals Badge" class="card__img">
+                      <div class="card__shadow"></div>
+                  </div>
+    
+                  <div class="card__data">
+                      <h3 class="card__name">IBM Applied Software Engineering Fnd. Specialization</h3>
+                      <p class="card__description">
+                        Specialization provided by IBM that validates expertise in Applied Software Engineering Fundamentals.
+                      </p>
+    
+                      <a href="#" class="card__button">View More</a>
+                  </div>
+                </article>
+            </div>
+          </div>
+
+          <!-- Navigation buttons -->
+          <div class="swiper-button-next">
+            <i class="fa-solid fa-diagram-next fa-rotate-270"></i>
+            
+          </div>
+          
+          <div class="swiper-button-prev">
+            <i class="fa-solid fa-diagram-next fa-rotate-90"></i>
+          </div>
+
+          <!-- Pagination -->
+          <div class="swiper-pagination"></div>
+      </div>
+  </section>
+  
+  <!-- Swiper Library JS -->
+  <script src="js/swiper-bundle.min.js"></script>
+  <!-- Custom Swiper Initialization -->
+  <script src="js/swiper.js"></script>
+</body>
+</html>
