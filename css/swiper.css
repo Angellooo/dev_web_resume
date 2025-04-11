@@ -1,28 +1,23 @@
-/* DELETE AFTER TESTING Font-awesome import is in main.css*/
-@import url("font-awesome/css/all.min.css");
-@import url("micons/micons.css");
-@import url("fonts.css");
-/* DELETE AFTER TESTING */
-
 /*=============== GOOGLE FONTS ===============*/
 @import url("https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;500;600&display=swap");
 
 /*=============== VARIABLES CSS ===============*/
 :root {
   /* Colors */
-  --first-color: #f6f6f6;
-  --first-color-light: hsl(204, 24%, 92%);
-  --first-color-alt: hsl(180, 3%, 6%);
+  --first-color: #4745452c;
+  --first-color-light: hsla(0, 0%, 15%, 0.729);
+  --first-color-alt: hsl(0, 0%, 46%);
   --second-color: hsl(195, 75%, 52%);
-  --dark-color: hsl(194, 94%, 6%);
+  --dark-color: hsl(240, 2%, 92%);
   --white-color: hsl(0, 0%, 100%);
   --body-color: #f6f6f6;
   --container-color: hsl(210, 6%, 13%);
 
   /* Typography */
   --body-font: "Bai Jamjuree", sans-serif;
-  --h2-font-size: 1.25rem;
-  --normal-font-size: 1rem;
+  --h2-font-size: 2.3rem;
+  --normal-font-size: 1.5rem;
+  --provider-des-font-size: 2rem;
 }
 
 
@@ -31,13 +26,6 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-}
-
-body {
-  font-family: var(--body-font);
-  font-size: var(--normal-font-size);
-  background-color: var(--body-color);
-  color: var(--white-color);
 }
 
 a {
@@ -87,7 +75,7 @@ img {
   justify-content: center;
   align-items: center;
   top: 0;
-  height: 50%;
+  height: 85%;
 }
 
 #provider-logo img {
@@ -134,14 +122,14 @@ img {
   position: absolute;
   bottom: 0;
   width: 100%;
-  height: 50%;
+  height: 25%;
   padding: 20px;
   text-align: center;
 }
 
 #provider-description {
   font-family: "Bai Jamjuree", sans-serif; /* Consistent font */
-  font-size: 1.2rem; /* Standard font size */
+  font-size: var(--provider-des-font-size); /* Standard font size */
   font-weight: 400; /* Normal weight for readability */
   color: var(--white-color); /* White text for contrast */
   line-height: 1.6; /* Increased line height for better readability */
@@ -175,7 +163,8 @@ img {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.5))
+  background: linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.5));
+  overflow: hidden;
 }
 
 /* Provider info styling */
@@ -186,23 +175,48 @@ img {
 
 /*=============== SWIPER SLIDER & CARD STYLES ===============*/
 
+.swiper-slide {
+  scale: 0.7;
+  transition: scale 0.3s ease-in-out; /* Smooth transition for scaling */
+}
+
+.swiper-slide-active {
+  scale: 1;
+  transition: scale 0.3s ease-in-out; /* Ensure the same transition for consistency */
+}
+
 /* Container for the swiper slider */
 .card__container {
   max-width: 100%;
+  height: 100%;
   padding: 2rem;
   position: relative;
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
 }
 
 /* Wraps all slides */
 .card__content {
+  width: 100%;
+  height: 80%;
+  align-items: center; /* Center vertically */
   margin: 0 auto;
   border-radius: 1.25rem;
   overflow: hidden;
+  display: flex; /* Enable Flexbox */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
 }
 
 /* Individual card (slide) */
 .card__article {
-  width: 300px; /* Fixed width for each card */
+  position: relative;
+  width: 30%; /* Fixed width for each card */
+  height: auto;
+  align-items: center; /* Center vertically */
+  align-self: center;
+  max-height: 100%;
   border-radius: 1.25rem;
   overflow: hidden;
 }
@@ -246,6 +260,7 @@ img {
   text-align: center;
   position: relative;
   z-index: 10;
+  margin-top: auto; /* Ensure it stays at the bottom of the card */
 }
 
 /* Card title */
@@ -259,6 +274,12 @@ img {
 .card__description {
   font-weight: 500;
   margin-bottom: 1.75rem;
+  font-size: var(--normal-font-size); /* Standard font size */
+  color: var(--white-color); /* White text for contrast */
+  line-height: 1.6; /* Increased line height for better readability */
+  text-align: center; /* Justify text for a clean layout */
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+  padding: 0 1rem; /* Add padding for spacing */
 }
 
 /* Button style */
@@ -321,6 +342,7 @@ img {
 /* Ensure the custom arrows are visible */
 .swiper-button-next i,
 .swiper-button-prev i {
+  scale: 1.5;
   font-size: 1.5rem; /* Set a visible font size for the custom icons */
   color: var(--white-color); /* Ensure the custom icons are visible */
   display: inline-block; /* Ensure the icons are displayed */
@@ -361,12 +383,6 @@ img {
   }
 }
 
-@media screen and (max-width: 768px) {
-  #provider-description {
-    font-size: 1rem; /* Reduce font size for medium screens */
-    line-height: 1.4; /* Adjust line height for better readability */
-  }
-}
 
 @media screen and (max-width: 480px) {
   #provider-logo {
@@ -375,9 +391,61 @@ img {
   }
 }
 
+@media screen and (max-width: 768px) {
+  #provider-description {
+    font-size: 1rem; /* Reduce font size for medium screens */
+    line-height: 1.4; /* Adjust line height for better readability */
+  }
+}
+
 @media screen and (max-width: 480px) {
   #provider-description {
-    font-size: 0.9rem; /* Further reduce font size for smaller screens */
-    line-height: 1.3; /* Adjust line height for better readability */
+    font-size: 0.7rem; /* Further reduce font size for smaller screens */
+    line-height: 1.1; /* Adjust line height for better readability */
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  #certificates-section {
+    flex-direction: column; /* Stack the sections vertically */
+  }
+  #provider-description {
+    font-size: 1.8rem; /* Increase font size for better readability */
+    line-height: 1.3; /* Adjust line height */
+  }
+  #provider-info {
+    height: 40%; /* Increase height to accommodate larger text */
+  }
+  #provider-logo {
+    width: 50%; /* Reduce width to maintain balance */
+    max-width: 200px; /* Adjust max width */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #provider-description {
+    font-size: 1.8rem; /* Increase font size for better readability */
+    line-height: 1.3; /* Adjust line height */
+  }
+  #provider-info {
+    height: 40%; /* Increase height to accommodate larger text */
+  }
+  #provider-logo {
+    width: 50%; /* Reduce width to maintain balance */
+    max-width: 200px; /* Adjust max width */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #provider-description {
+    font-size: 1.5rem; /* Further increase font size for very small screens */
+    line-height: 1.4; /* Adjust line height */
+  }
+  #provider-info {
+    height: 50%; /* Further increase height for very small screens */
+  }
+  #provider-logo {
+    width: 40%; /* Further reduce width */
+    max-width: 150px; /* Adjust max width */
   }
 }

@@ -4,12 +4,29 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Certificate Slider</title>
-  <!-- Font Awesome Library for Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css">
-  <!-- Swiper Library Styles -->
-  <link rel="stylesheet" href="css/swiper-bundle.min.css">
-  <!-- Custom Swiper Styles -->
-  <link rel="stylesheet" href="css/swiper.css">
+ 	<!-- CSS
+   ================================================== -->
+   <link rel="stylesheet" href="css/base.css">
+   <link rel="stylesheet" href="css/vendor.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css" crossorigin="">
+   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+   <link rel="stylesheet" href="css/main.css">
+   
+   <!-- script
+   ================================================== -->
+	<script src="js/modernizr.js"></script>
+	<script src="js/pace.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+	
+	<!--=============== SWIPER CSS ===============-->
+	
+	<link rel="stylesheet" href="css/swiper-bundle.min.css">
+	<link rel="stylesheet" href="css/swiper.css">
+	
+   <!-- favicons
+	================================================== -->
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+	<link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
   <section id="certificates-section">
@@ -17,10 +34,9 @@
     <aside class="left-container">
       <div id="provider-bg"></div>
       <div id="provider-logo">
-          <img src="images/testing/brands/ibm_logo.svg" alt="Provider Logo">
+          <img src="" alt="Provider Logo">
       </div>
       <div id="provider-info">
-        <h2 id="provider-name" alt="Provider Name">IBM</h2> <!-- Added provider name -->
         <p id="provider-description" alt="Provider Description">IBM is an American multinational technology company headquartered in Armonk, New York and present in over 175 countries. Is the largest industrial research organization in the world, providing certifications that validate expertise in cutting-edge technologies.</p>
       </div>
     </aside>
@@ -113,12 +129,12 @@
           </div>
 
           <!-- Navigation buttons -->
-          <div class="swiper-button-next">
+          <div class="swiper-button-next" title="Next Certificate">
             <i class="fa-solid fa-diagram-next fa-rotate-270"></i>
             
           </div>
           
-          <div class="swiper-button-prev">
+          <div class="swiper-button-prev" title="Previous Certificate">
             <i class="fa-solid fa-diagram-next fa-rotate-90"></i>
           </div>
 
