@@ -22,7 +22,8 @@
  *  15. testimonials
  *  16. clients
  *  17. contact
- *  18. footer
+ *  18. modal
+ *  19. footer
  *
  * =================================================================== */
 
@@ -2013,8 +2014,25 @@
  /* ===================================================================
   *  13. Certificates Section
   *
- 
- 
+  * ------------------------------------------------------------------- */
+  #intro-certificates {
+    background: #FFFFFF;
+    padding: 0;
+  }
+  #intro-certificates .intro-wrap {
+    padding-top: 7rem;
+    background: #111111;
+  }
+  #intro-certificates .section-intro h3 {
+    color: rgba(242, 242, 242, 0.5);
+  }
+  #intro-certificates .section-intro h1 {
+    color: #FFFFFF;
+  }
+  #intro-certificates .section-intro .lead {
+    color: rgba(242, 242, 242, 0.4);
+  }  
+
  /* ===================================================================
   *  14. portfolio - (_layout.scss)
   *
@@ -2811,9 +2829,108 @@
    }
  }
  
- 
+  /* ===================================================================
+  *  18. Modal - (_layout.scss)
+  *
+  * ------------------------------------------------------------------- */
+  
+/* Modal Overlay */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6); /* Darker overlay for better contrast */
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.5s ease; /* Smooth fade-in/out */
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  font-family: "montserrat-bold", sans-serif;
+  font-size: 1.5rem;
+  background-color: rgba(255, 255, 255, 0.95); /* Bright background for better readability */
+  color: rgb(84, 84, 84); /* Darker text for better contrast */
+  padding: 30px; /* Increased padding for a cleaner look */
+  border-radius: 10px; /* Slightly rounded corners */
+  text-align: center;
+  box-sizing: border-box; /* Include padding in width/height calculations */
+  max-width: 500px; /* Slightly wider modal */
+  width: 90%;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); /* Stronger shadow for a floating effect */
+  transform: translateY(-50px); /* Fly-in effect */
+  transition: transform 0.6s ease, opacity 0.4s ease; /* Smooth animations */
+  opacity: 0; /* Initially hidden */
+}
+
+.modal-link{
+  text-decoration: none;
+  color: hsl(195, 75%, 52%);
+  font-size: 1.4rem;
+  font-family: "montserrat-bold", sans-serif;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: #189de9;
+  }
+}
+
+/* Modal Buttons */
+.modal-buttons {
+  margin-top: 10%;
+  display: flex;
+  justify-content: space-around; /* Equal space around buttons */
+}
+
+.modal-button {
+  border: 1px solid gray; /* Solid border for better visibility */
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold; /* Bold text for emphasis */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth hover effects */
+}
+
+.modal-button#accept-button {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: gray;
+}
+
+.modal-button#accept-button:hover {
+  background-color: rgb(155, 247, 132);
+  transform: scale(1.05); /* Slight zoom on hover */
+  color: rgb(72, 72, 72);
+}
+
+.modal-button#cancel-button {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: gray;
+}
+
+.modal-button#cancel-button:hover {
+  background-color: rgb(255, 155, 155);
+  transform: scale(1.05); /* Slight zoom on hover */
+  color: rgb(72, 72, 72);
+}
+
+/* Show Modal */
+.modal.show {
+  display: flex; /* Make modal visible */
+  opacity: 1; /* Fade-in effect */
+}
+
+.modal-content.show {
+  transform: translateY(0); /* Fly-in effect */
+  opacity: 1; /* Make content visible */
+}
+
  /* ===================================================================
-  *  18. footer - (_layout.scss)
+  *  19. footer - (_layout.scss)
   *
   * ------------------------------------------------------------------- */
  footer {

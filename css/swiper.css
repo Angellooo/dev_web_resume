@@ -42,7 +42,6 @@ img {
 #certificates-section {
   display: flex;
   min-height: 800px;
-  max-height: 100%;
   max-width: 100%;
   position: relative;
   margin-bottom: 1.5rem;
@@ -186,6 +185,7 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: visible;
 }
 
 .card__article {
@@ -196,7 +196,7 @@ img {
   align-self: center;
   max-height: 100%;
   border-radius: 1.25rem;
-  overflow: hidden;
+  overflow: visible;
 }
 
 .card__image {
@@ -204,6 +204,7 @@ img {
   background-color: var(--first-color-light);
   padding-top: 1.5rem;
   margin-bottom: -0.75rem;
+  overflow: visible;
 }
 
 .card__img {
@@ -249,7 +250,7 @@ img {
   font-size: var(--normal-font-size);
   color: var(--white-color);
   line-height: 1.6;
-  text-align: center;
+  text-align: justify;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   padding: 0 1rem;
 }
@@ -318,6 +319,20 @@ img {
 }
 
 /*=============== RESPONSIVE BREAKPOINTS ===============*/
+
+@media screen and (max-width: 1024px) {
+  #provider-description {
+    font-size: 1.8rem;
+    line-height: 1.3;
+  }
+  #provider-info {
+    height: 40%;
+  }
+  #provider-logo {
+    width: 50%;
+    max-width: 200px;
+  }
+}
 @media screen and (max-width: 768px) {
   #certificates-section {
     flex-direction: column;
@@ -332,7 +347,7 @@ img {
     max-width: 250px;
   }
   #provider-description {
-    font-size: 1rem;
+    font-size: 1.7rem;
     line-height: 1.4;
   }
 }
@@ -343,21 +358,75 @@ img {
     max-width: 300px;
   }
   #provider-description {
-    font-size: 0.7rem;
+    font-size: 1.3rem;
     line-height: 1.1;
   }
 }
 
-@media screen and (max-width: 1024px) {
-  #provider-description {
-    font-size: 1.8rem;
-    line-height: 1.3;
-  }
-  #provider-info {
-    height: 40%;
-  }
-  #provider-logo {
-    width: 50%;
-    max-width: 200px;
+
+/* Badge Container */
+.badge-container {
+  position: absolute;
+  top: 10px; /* Adjust as needed */
+  right: 10px; /* Adjust as needed */
+  display: flex;
+  flex-direction: column; /* Stack badges vertically */
+  align-items: center;
+  gap: 10px; /* Space between badges */
+  z-index: 10; /* Ensure it appears above other elements */
+}
+
+/* Individual Badges */
+.verified-badge {
+  width: 24px; /* Default size */
+  height: 24px;
+  cursor: pointer;
+  object-fit: contain; /* Ensure the image scales proportionally */
+}
+
+/* Individual Badges */
+.professional-certificate, .specialization-certificate {
+  width: 32px; /* Default size */
+  height: 32px;
+  cursor: pointer;
+  object-fit: contain; /* Ensure the image scales proportionally */
+}
+
+.verified-badge[data-badge-provider="credly"] {
+  background: url('../images/icons/verify_badge_credly.svg') no-repeat center;
+}
+
+.verified-badge[data-badge-provider="coursera"] {
+  background: url('../images/icons/verify_badge_coursera.svg') no-repeat center;
+}
+
+.professional-certificate {
+  background: url('../images/icons/professional_certificate_badge.svg') no-repeat center;
+}
+
+.specialization-certificate{
+  background: url('../images/icons/specialization_badge.svg') no-repeat center;
+}
+
+.verified-badge:hover::after, .professional-certificate:hover::after, .specialization-certificate:hover::after {
+  content: attr(title); /* Display the title attribute */
+  position: absolute;
+  top: -30px; /* Position above the badge */
+  left: calc(100% + 10px); /* Default: Position to the right of the badge */
+  background: #000;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 12px;
+  white-space: nowrap;
+  z-index: 15; /* Ensure it appears above other elements */
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+@media screen and (max-width: 480px) {
+  .verified-badge:hover::after, .professional-certificate:hover::after, .specialization-certificate:hover::after {
+      left: auto; /* Reset left positioning */
+      right: calc(100% + 10px); /* Position to the left of the badge */
   }
 }

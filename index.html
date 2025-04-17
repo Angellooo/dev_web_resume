@@ -68,11 +68,12 @@
 	   	<h3>Angello Gonzalez.</h3>  
 
 			<ul class="nav-list">
-				<li class="current"><a class="smoothscroll" href="#home" title="">Home</a></li>
-				<li><a class="smoothscroll" href="#about" title="">About</a></li>
-				<li><a class="smoothscroll" href="#services" title="">Services</a></li>
-				<li><a class="smoothscroll" href="#portfolio" title="">Portfolio</a></li>
-				<li><a class="smoothscroll" href="#contact" title="">Contact</a></li>						
+				<li class="current"><a class="smoothscroll" href="#home" title="Home">Home</a></li>
+				<li><a class="smoothscroll" href="#about" title="About">About</a></li>
+				<li><a class="smoothscroll" href="#services" title="Services">Services</a></li>
+				<li><a class="smoothscroll" href="#portfolio" title="Portfolio">Portfolio</a></li>
+				<li><a class="smoothscroll" href="#contact" title="Contact">Contact</a></li>
+				<li><a class="smoothscroll" href="" target="_blank" rel="noreferrer noopener" title="Resume">Download Resume</a></li>							
 			</ul>	
 
 			<ul class="header-social-list">
@@ -89,7 +90,7 @@
 	</header> <!-- end header -->  
 
 
-   <!-- home
+   <!-- Home
    ================================================== -->
    <section id="home">
 
@@ -100,7 +101,7 @@
 		   	<div class="row">
 		   		<div class="col-twelve">		   			
 			  		
-			  				<h3 class="animate-intro">I'm</h3>
+			  				<h3 class="animate-intro">I am</h3>
 				  			<h1 class="animate-intro">Angello Gonzalez</h1>
 							<h3 class="animate-intro">A Software Engineer specialize in:</h3>
 							<h3 class="animate-intro">
@@ -174,7 +175,7 @@
 </section> <!-- end about -->
 
 
-   <!-- about
+   <!-- Services
    ================================================== -->
    <section id="services">
 
@@ -250,15 +251,29 @@
 
    </section> <!-- end services -->
 
+   <!-- Certificates ================================================== -->
+	<section id="intro-certificates">
+	<div class="intro-wrap">
+		<div class="row narrow section-intro with-bottom-sep animate-this">
+			<div class="col-twelve">
+				<h3>Showcase</h3>
+				<h1>My Certificates.</h1>  			
+				
+				<p class="lead">Here are some of the certificates I earn from top IT companies and Universities.</p>	   			
+			</div>   		
+		</div> <!-- end row section-intro -->   		
+	</div> <!-- end intro-wrap -->
+	</section>
+
    <section id="certificates-section">
 	
     <!-- Left container: Certificate provider info -->
     <aside class="left-container">
       <div id="provider-bg"></div>
-      <div id="provider-logo">
+      <div class="animate-this" id="provider-logo">
           <img src="" alt="Provider Logo">
       </div>
-      <div id="provider-info">
+      <div class="animate-this" id="provider-info">
         <p id="provider-description" alt="Provider Description">IBM is an American multinational technology company headquartered in Armonk, New York and present in over 175 countries. Is the largest industrial research organization in the world, providing certifications that validate expertise in cutting-edge technologies.</p>
       </div>
     </aside>
@@ -266,87 +281,411 @@
     <!-- Right container: Swiper slider -->
     <div class="right-container">
       <div class="card__container swiper">
-          <div class="card__content">
+          <div class="card__content animate-this">
             <div class="swiper-wrapper">
-                <article class="card__article swiper-slide" data-provider="IBM">
-                  <div class="card__image">
-                      <img src="./images/testing/certificates/ibm-back-end-application-development-capstone-project-badge.png" alt="IBM Back-End Application Development Capstone Project Badge" class="card__img">
-                      <div class="card__shadow"></div>
-                  </div>
+                <article class="card__article swiper-slide" data-provider="IBM" title="IBM Back-End Development Professional Certificate">
+					<div class="card__image">
+						<img src="./images/testing/certificates/IBM_Back_End_Development_Professional_Certificate.png" alt="IBM Back-End Development Professional Certificate" class="card__img">
+						<div class="card__shadow"></div>
+					
+						<!-- Badge Container -->
+						<div class="badge-container">
+							<!-- Professional Certificate -->
+							<div class="professional-certificate"
+								title="IBM Professional Certificate"></div>
+
+							<!-- Verified by Credly -->
+							<div class="verified-badge" 
+								data-badge-id="fc5f0de3-8169-4d1d-ae8d-c8d27020d77b" 
+								data-badge-provider="credly" 
+								title="Verified by Credly"></div>
+					
+							<!-- Verified by Coursera -->
+							<div class="verified-badge" 
+								data-badge-id="WG0EBLG9UOUX" 
+								data-badge-provider="coursera" 
+								title="Verified by Coursera"></div>
+						</div>
+					</div>
     
                   <div class="card__data">
-                      <h3 class="card__name">IBM Back-End Application Development Capstone Project</h3>
+                      <h3 class="card__name">IBM Back-End Development Professional Certificate</h3>
                       <p class="card__description">
-                        This project is the culmination of the Back-End Application Development Professional Certificate.
+						Certificate provided by IBM that validates expertise in Back-End Development, including tools like Python, Docker, Microservices and Kubernetes, with hands-on experience in deploying, scaling, and automating modern server-side applications.
                       </p>
     
                       <a href="#" class="card__button">View More</a>
                   </div>
                 </article>
     
-                <article class="card__article swiper-slide" data-provider="UPenn">
+				<article class="card__article swiper-slide" data-provider="UPenn" title="University of Pennsylvania English for Career Development Certificate">
+					<div class="card__image">
+						<img src="./images/testing/certificates/UPenn_english-for-career-development-certificate.png" alt="University of Pennsylvania English for Career Development Certificate" class="card__img">
+						<div class="card__shadow"></div>
+					
+						<!-- Badge Container -->
+						<div class="badge-container">			
+							<!-- Verified by Coursera -->
+							<div class="verified-badge" 
+								data-badge-id="Y92YZDS2PQHW" 
+								data-badge-provider="coursera" 
+								title="Verified by Coursera"></div>
+						</div>
+					</div>
+				  
+					<div class="card__data">
+						<h3 class="card__name">University of Pennsylvania English for Career Development</h3>
+						<p class="card__description">
+						This certificate, provided by the University of Pennsylvania, validates expertise in English for Career Development. It focuses on enhancing communication skills to excel in professional environments.
+						</p>
+						<a href="#" class="card__button">View More</a>
+					</div>
+				  </article>
+    
+                <article class="card__article swiper-slide" data-provider="IBM">
                   <div class="card__image">
-                      <img src="./images/testing/certificates/upenn_english-for-career-development-certificate.png" alt="University of Pennsylvania English for Career Development Certificate" class="card__img">
+                      <img src="./images/testing/certificates/IBM_applied_software_engineering_fundamentals.png" alt="IBM Applied Software Engineering Fundamentals Specialization" class="card__img">
                       <div class="card__shadow"></div>
+					  <div class="badge-container">
+						<!-- Professional Certificate -->
+						<div class="specialization-certificate"
+						title="IBM Specialization Certificate"></div>
+
+						<!-- Verified by Credly -->
+						<div class="verified-badge" 
+							data-badge-id="062245b8-d3a3-404b-8572-b9bd075d217a" 
+							data-badge-provider="credly" 
+							title="Verified by Credly"></div>
+				
+						<!-- Verified by Coursera -->
+						<div class="verified-badge" 
+							data-badge-id="QS9GUJLEDXQF" 
+							data-badge-provider="coursera" 
+							title="Verified by Coursera"></div>
+					</div>
                   </div>
     
                   <div class="card__data">
-                      <h3 class="card__name">English for Career Development</h3>
+                      <h3 class="card__name">IBM Applied Software Engineering Fnd. Specialization</h3>
                       <p class="card__description">
-                        Certificate provided by the University of Pennsylvania that validates English expertise for Career Development.
+                        Validates mastery of software engineering fundamentals, including SDLC, Git/GitHub, Linux scripting, and Python application development.
                       </p>
     
                       <a href="#" class="card__button">View More</a>
                   </div>
                 </article>
     
-                <article class="card__article swiper-slide" data-provider="IBM">
-                  <div class="card__image">
-                      <img src="./images/testing/certificates/ibm-python-for-data-science-and-ai-badge.png" alt="IBM Python for Data Science and AI badge" class="card__img">
-                      <div class="card__shadow"></div>
-                  </div>
+                <article class="card__article swiper-slide" data-provider="IBM" title="IBM Python for Data Science, AI & Development Certificate">
+					<div class="card__image">
+						<img src="./images/testing/certificates/IBM_python_project_for_ai_and_application_development.png" alt="IBM Python for Data Science, AI & Development Certificate" class="card__img">
+						<div class="card__shadow"></div>
+					
+						<!-- Badge Container -->
+						<div class="badge-container">
+							<!-- Verified by Credly -->
+							<div class="verified-badge" 
+								data-badge-id="54bc90ad-319e-4f0f-a938-e93dec5912d8" 
+								data-badge-provider="credly" 
+								title="Verified by Credly"></div>
+					
+							<!-- Verified by Coursera -->
+							<div class="verified-badge" 
+								data-badge-id="YESZSUFVF5BZ" 
+								data-badge-provider="coursera" 
+								title="Verified by Coursera"></div>
+						</div>
+					</div>
     
                   <div class="card__data">
-                      <h3 class="card__name">Python for Data Science and AI</h3>
+                      <h3 class="card__name">Python Project for AI and Application Development</h3>
                       <p class="card__description">
-                        Certificate provided by IBM that validates Python expertise for Data Science and AI.
-                      </p>
-    
-                      <a href="#" class="card__button">View More</a>
-                  </div>
-                </article>
-    
-                <article class="card__article swiper-slide" data-provider="IBM">
-                  <div class="card__image">
-                      <img src="./images/testing/certificates/ibm-back-end-professional-certificate.png" alt="IBM Back-End Professional Certificate" class="card__img">
-                      <div class="card__shadow"></div>
-                  </div>
-    
-                  <div class="card__data">
-                      <h3 class="card__name">IBM Back-End Professional Certificate</h3>
-                      <p class="card__description">
-                        Professional Certificate provided by IBM that validates expertise in Back-End Development.
+                        Certifies proficiency in developing AI apps with Python and Flask. The badge earner follows the app lifecycle—creating modules, testing, packaging per PEP8—and deploys AI solutions using IBM Watson libraries.
                       </p>
     
                       <a href="#" class="card__button">View More</a>
                   </div>
                 </article>
 
-                <article class="card__article swiper-slide" data-provider="IBM">
-                  <div class="card__image">
-                      <img src="./images/testing/certificates/ibm-applied-software-engineering-fundamentals-badge.png" alt="IBM Applied Software Engineering Fundamentals Badge" class="card__img">
-                      <div class="card__shadow"></div>
-                  </div>
+                <article class="card__article swiper-slide" data-provider="IBM" title="IBM Python for Data Science and AI Certificate">
+					<div class="card__image">
+						<img src="./images/testing/certificates/IBM_python_for_data_science_and_ai.png" alt="IBM Python for Data Science and AI Certificate" class="card__img">
+						<div class="card__shadow"></div>
+					
+						<!-- Badge Container -->
+						<div class="badge-container">
+							<!-- Verified by Credly -->
+							<div class="verified-badge" 
+								data-badge-id="a8290c5d-d520-4e79-8a73-8f22fb590f97" 
+								data-badge-provider="credly" 
+								title="Verified by Credly"></div>
+					
+							<!-- Verified by Coursera -->
+							<div class="verified-badge" 
+								data-badge-id="LWXF7TMK2PW6" 
+								data-badge-provider="coursera" 
+								title="Verified by Coursera"></div>
+						</div>
+					</div>
     
                   <div class="card__data">
-                      <h3 class="card__name">IBM Applied Software Engineering Fnd. Specialization</h3>
+                      <h3 class="card__name">IBM Python for Data Science and AI</h3>
                       <p class="card__description">
-                        Specialization provided by IBM that validates expertise in Applied Software Engineering Fundamentals.
+                        Certifies mastery of Python fundamentals for data science. The badge earner efficiently uses key data structures and libraries like Pandas, Numpy, and Beautiful Soup, and develops code in Jupyter.
                       </p>
     
                       <a href="#" class="card__button">View More</a>
                   </div>
                 </article>
+
+                <article class="card__article swiper-slide" data-provider="IBM" title="IBM Application Development using Microservices and Serverless Certificate">
+					<div class="card__image">
+						<img src="./images/testing/certificates/IBM_application_development_using_microservices_and_serverless.png" alt="IBM Application Development using Microservices and Serverless Certificate" class="card__img">
+						<div class="card__shadow"></div>
+					
+						<!-- Badge Container -->
+						<div class="badge-container">
+							<!-- Verified by Credly -->
+							<div class="verified-badge" 
+								data-badge-id="48e6e0ed-1e37-4770-8dea-0c6f5b225ab5" 
+								data-badge-provider="credly" 
+								title="Verified by Credly"></div>
+					
+							<!-- Verified by Coursera -->
+							<div class="verified-badge" 
+								data-badge-id="3N23OL4RV4I4" 
+								data-badge-provider="coursera" 
+								title="Verified by Coursera"></div>
+						</div>
+					</div>
+    
+                  <div class="card__data">
+                      <h3 class="card__name">Application Development using Microservices and Serverless</h3>
+                      <p class="card__description">
+                        Certifies proficiency in designing microservices and serverless apps. The badge earner demonstrates creating REST APIs, testing with cURL/Postman, and deploying containerized applications using Docker and IBM Code Engine.
+                      </p>
+    
+                      <a href="#" class="card__button">View More</a>
+                  </div>
+                </article>
+
+                <article class="card__article swiper-slide" data-provider="IBM" title="IBM Back-end Application Development Capstone Project">
+					<div class="card__image">
+						<img src="./images/testing/certificates/IBM_back_end_application_development_capstone_project.png" alt="IBM Back-end Application Development Capstone Project" class="card__img">
+						<div class="card__shadow"></div>
+					
+						<!-- Badge Container -->
+						<div class="badge-container">
+							<!-- Verified by Credly -->
+							<div class="verified-badge" 
+								data-badge-id="4e6a8a15-87cd-49b3-adfb-6a6f15943870" 
+								data-badge-provider="credly" 
+								title="Verified by Credly"></div>
+					
+							<!-- Verified by Coursera -->
+							<div class="verified-badge" 
+								data-badge-id="SQRV24J2N8CD" 
+								data-badge-provider="coursera" 
+								title="Verified by Coursera"></div>
+						</div>
+					</div>
+    
+                  <div class="card__data">
+                      <h3 class="card__name">IBM Back-end Application Development Capstone Project</h3>
+                      <p class="card__description">
+                        Certifies mastery in back-end development. The badge earner demonstrates proficiency in MongoDB, microservices and REST APIs, integrating Django apps, and deploying applications using Docker, Kubernetes, OpenShift, and IBM Code Engine.
+                      </p>
+    
+                      <a href="#" class="card__button">View More</a>
+                  </div>
+                </article>
+
+                <article class="card__article swiper-slide" data-provider="IBM" title="IBM Developing Applications with SQL, Databases, and Django Certificate">
+					<div class="card__image">
+						<img src="./images/testing/certificates/IBM_developing_applications_with_sql_databases_and_django.png" alt="IBM Developing Applications with SQL, Databases, and Django Certificate" class="card__img">
+						<div class="card__shadow"></div>
+					
+						<!-- Badge Container -->
+						<div class="badge-container">
+							<!-- Verified by Credly -->
+							<div class="verified-badge" 
+								data-badge-id="f088f692-6504-45c2-9328-6854a1a1d627" 
+								data-badge-provider="credly" 
+								title="Verified by Credly"></div>
+					
+							<!-- Verified by Coursera -->
+							<div class="verified-badge" 
+								data-badge-id="JM8SGLCZA5FB" 
+								data-badge-provider="coursera" 
+								title="Verified by Coursera"></div>
+						</div>
+					</div>
+    
+                  <div class="card__data">
+                      <h3 class="card__name">Developing Applications with SQL, Databases, and Django</h3>
+                      <p class="card__description">
+						Certifies foundational skills in SQL, relational databases, and Django. The badge earner designs ER models, writes SQL queries, and leverages Django ORM with Bootstrap to build interactive web applications.
+                      </p>
+    
+                      <a href="#" class="card__button">View More</a>
+                  </div>
+                </article>
+
+                <article class="card__article swiper-slide" data-provider="IBM" title="IBM Monitoring and Observability for Development and DevOps Certificate">
+					<div class="card__image">
+						<img src="./images/testing/certificates/IBM_monitoring_and_observability_for_development_and_devops.png" alt="IBM Monitoring and Observability for Development and DevOps Certificate" class="card__img">
+						<div class="card__shadow"></div>
+					
+						<!-- Badge Container -->
+						<div class="badge-container">
+							<!-- Verified by Credly -->
+							<div class="verified-badge" 
+								data-badge-id="6a680e90-9e66-4066-92db-1c4d4168691e" 
+								data-badge-provider="credly" 
+								title="Verified by Credly"></div>
+					
+							<!-- Verified by Coursera -->
+							<div class="verified-badge" 
+								data-badge-id="6FM15ZADPA1Y" 
+								data-badge-provider="coursera" 
+								title="Verified by Coursera"></div>
+						</div>
+					</div>
+    
+                  <div class="card__data">
+                      <h3 class="card__name">Monitoring and Observability for Development and DevOps</h3>
+                      <p class="card__description">
+						Certifies mastery in monitoring and observability practices. The badge earner demonstrates expertise in Golden Signals, logging, telemetry with OpenTelemetry, Prometheus, Grafana, Mezmo (LogDNA), and Instana for robust DevOps insights.
+                      </p>
+    
+                      <a href="#" class="card__button">View More</a>
+                  </div>
+                </article>
+
+                <article class="card__article swiper-slide" data-provider="IBM" title="IBM Container & Kubernetes Essentials V2 Certificate">
+					<div class="card__image">
+						<img src="./images/testing/certificates/IBM_container_and_kubernetes_essentials_V2.png" alt="IBM Container & Kubernetes Essentials V2 Certificate" class="card__img">
+						<div class="card__shadow"></div>
+					
+						<!-- Badge Container -->
+						<div class="badge-container">
+							<!-- Verified by Credly -->
+							<div class="verified-badge" 
+								data-badge-id="f1d4541a-efb5-4fc2-967c-ec7f50a5b1ff" 
+								data-badge-provider="credly" 
+								title="Verified by Credly"></div>
+					
+							<!-- Verified by Coursera -->
+							<div class="verified-badge" 
+								data-badge-id="1OZ4Y91U4H9Z" 
+								data-badge-provider="coursera" 
+								title="Verified by Coursera"></div>
+						</div>
+					</div>
+    
+                  <div class="card__data">
+                      <h3 class="card__name">Container & Kubernetes Essentials V2</h3>
+                      <p class="card__description">
+						Certifies proficiency in containerization and Kubernetes lifecycle management. The badge earner can build and run container images, author YAML deployments, manage ReplicaSets, and leverage OpenShift and Istio for cloud-native applications.
+                      </p>
+    
+                      <a href="#" class="card__button">View More</a>
+                  </div>
+                </article>
+
+                <article class="card__article swiper-slide" data-provider="IBM" title="IBM Linux Commands & Shell Scripting Essentials Certificate">
+					<div class="card__image">
+						<img src="./images/testing/certificates/IBM_linux_commands_and_shell_scripting_essentials.png" alt="IBM Linux Commands & Shell Scripting Essentials Certificate" class="card__img">
+						<div class="card__shadow"></div>
+					
+						<!-- Badge Container -->
+						<div class="badge-container">
+							<!-- Verified by Credly -->
+							<div class="verified-badge" 
+								data-badge-id="ba051bb4-1830-477f-a984-7748d3b89cf2" 
+								data-badge-provider="credly" 
+								title="Verified by Credly"></div>
+					
+							<!-- Verified by Coursera -->
+							<div class="verified-badge" 
+								data-badge-id="R7K5HJRQKQXZ" 
+								data-badge-provider="coursera" 
+								title="Verified by Coursera"></div>
+						</div>
+					</div>
+    
+                  <div class="card__data">
+                      <h3 class="card__name">Linux Commands & Shell Scripting Essentials</h3>
+                      <p class="card__description">
+						Certifies proficiency in Linux fundamentals. The badge earner demonstrates hands-on expertise in executing common shell commands, crafting Bash scripts with pipes, filters, and variables, and scheduling cron jobs using crontab.
+                      </p>
+    
+                      <a href="#" class="card__button">View More</a>
+                  </div>
+                </article>
+
+				<article class="card__article swiper-slide" data-provider="IBM" title="IBM Git and GitHub Essentials Certificate">
+					<div class="card__image">
+						<img src="./images/testing/certificates/IBM_git_and_github_essentials.png" alt="IBM Git and GitHub Essentials Certificate" class="card__img">
+						<div class="card__shadow"></div>
+					
+						<!-- Badge Container -->
+						<div class="badge-container">
+							<!-- Verified by Credly -->
+							<div class="verified-badge" 
+								data-badge-id="c35ded23-0ed9-4879-b5e9-f454fd10d3a8" 
+								data-badge-provider="credly" 
+								title="Verified by Credly"></div>
+					
+							<!-- Verified by Coursera -->
+							<div class="verified-badge" 
+								data-badge-id="NXVY63WBXZET" 
+								data-badge-provider="coursera" 
+								title="Verified by Coursera"></div>
+						</div>
+					</div>
+    
+                  <div class="card__data">
+                      <h3 class="card__name">Git and GitHub Essentials</h3>
+                      <p class="card__description">
+						Certifies foundational skills in version control and collaborative coding. The badge earner can create and manage GitHub repositories, work with branches, perform pull requests and merges.
+                      </p>
+    
+                      <a href="#" class="card__button">View More</a>
+                  </div>
+                </article>
+
+				<article class="card__article swiper-slide" data-provider="IBM" title="IBM Software Engineering Essentials
+				Certificate">
+					<div class="card__image">
+						<img src="./images/testing/certificates/IBM_software_engineering_essentials.png" alt="IBM Software Engineering Essentials Certificate" class="card__img">
+						<div class="card__shadow"></div>
+					
+						<!-- Badge Container -->
+						<div class="badge-container">
+							<!-- Verified by Credly -->
+							<div class="verified-badge" 
+								data-badge-id="c09e1f16-eaac-495a-916c-0701d96c4005" 
+								data-badge-provider="credly" 
+								title="Verified by Credly"></div>
+					
+							<!-- Verified by Coursera -->
+							<div class="verified-badge" 
+								data-badge-id="T88QGZ6D82N2" 
+								data-badge-provider="coursera" 
+								title="Verified by Coursera"></div>
+						</div>
+					</div>
+    
+                  <div class="card__data">
+                      <h3 class="card__name">Software Engineering Essentials</h3>
+                      <p class="card__description">
+						Certifies foundational understanding of software engineering and the SDLC. The badge earner can identify key tools, architectures, and programming constructs, and is familiar with career paths in software development.
+                      </p>
+    
+                      <a href="#" class="card__button">View More</a>
+                  </div>
+                </article>
+				
             </div>
           </div>
 
@@ -620,7 +959,7 @@
    			<h3>Contact</h3>
    			<h1>Get In Touch.</h1>
 
-   			<p class="lead">Feel free to contact me for any inquiries or collaborations.</p>
+   			<p class="lead">Feel free to contact me for any inquiries or questions.</p>
    		</div> 
    	</div> <!-- end section-intro -->
 
@@ -681,33 +1020,21 @@
 
          <div class="col-four tab-full contact-info end animate-this">
 
-         	<h5>Contact Information</h5>
+         	<h5>OR EMAIL BY</h5>
 
          	<div class="cinfo">
-	   			<h6>Where to Find Me</h6>
+	   			<h6>LinkedIn</h6>
 	   			<p>
-	            	1600 Amphitheatre Parkway<br>
-	            	Mountain View, CA<br>
-	            	94043 US
+	            	linkedin.com/in/angellog/
 	            </p>
 	   		</div> <!-- end cinfo -->
 
 	   		<div class="cinfo">
-	   			<h6>Email Me At</h6>
+	   			<h6>Business Email</h6>
 	   			<p>
-	   				someone@yourwebsite.com<br>
-				   	info@yourwebsite.com			     
+	   				angello.gonzalez03@gmail.com	     
 				   </p>
 	   		</div> <!-- end cinfo -->
-
-	   		<div class="cinfo">
-	   			<h6>Call Me At</h6>
-	   			<p>
-	   				Phone: (+63) 555 1212<br>
-				   	Mobile: (+63) 555 0100<br>
-				     	Fax: (+63) 555 0101
-				   </p>
-	   		</div>
 
          </div> <!-- end cinfo --> 
 
@@ -737,10 +1064,7 @@
 
 	      		<ul class="list-links">
 	      			<li><a href="https://linkedin.com/in/yourprofile">LinkedIn</a></li>
-						<li><a href="https://github.com/yourprofile">GitHub</a></li>
-						<li><a href="#">Twitter</a></li>
-						<li><a href="#">Instagram</a></li>
-						<li><a href="#">Dribble</a></li>						
+					<li><a href="https://github.com/yourprofile">GitHub</a></li>				
 					</ul>
 
 	      	</div> <!-- end footer-social -->  
@@ -772,14 +1096,26 @@
 
    	</div> <!-- end footer-main -->
 
+ 	<!-- REDIRECT MODAL -->
+	<div id="badge-modal" class="modal">
+		<div class="modal-content">
+		<p>In order to see the badge information, you are about to be redirected to <span id="badge-provider-modal"></span>'s website. Do you want to proceed?</p>
+		<p>URL: <span class="modal-link" id="badge-link"></span></p>
+		<div class="modal-buttons">
+			<button id="accept-button" class="modal-button">Accept</button>
+			<button id="cancel-button" class="modal-button">Cancel</button>
+		</div>
+		</div>
+	</div>
+
    	<div class="footer-bottom">
 
       	<div class="row">
 
       		<div class="col-twelve">
 	      		<div class="copyright">
-		         	<span>© Copyright Your Name 2023.</span> 
-		         	<span>Design by <a href="http://www.styleshout.com/">styleshout</a></span>		         	
+		         	<span>© Copyright Angello Gonzalez 2025.</span> 
+		         	<span>Design by <a href="http://www.styleshout.com/">styleshout</a> and <a href="#">Angello Gonzalez</a></span>		         	
 		         </div>		               
 	      	</div>
 
@@ -813,6 +1149,7 @@
 	
    	<script src="js/swiper-bundle.min.js"></script>
 	<script src="js/swiper.js"></script>
+	<script src="js/modal.js"></script>
 
 
 </body>
