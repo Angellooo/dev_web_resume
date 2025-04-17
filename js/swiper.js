@@ -49,6 +49,7 @@ let swiperCards = new Swiper(".card__content", {
     el: ".swiper-pagination",
     clickable: true,
     dynamicBullets: true,
+    dynamicMainBullets: 9,
   },
 
   navigation: {
@@ -66,6 +67,8 @@ let swiperCards = new Swiper(".card__content", {
   },
 });
 
+let currentProvider = null; // Store the current provider
+
 // Function to update the left-container content
 function updateProviderInfo() {
   // Find the active slide using the "swiper-slide-active" class
@@ -76,27 +79,35 @@ function updateProviderInfo() {
   const provider = activeSlide.dataset.provider; // Get the data-provider attribute
   const providerInfo = providerData[provider]; // Get the provider data from the dictionary
 
-  if (providerInfo) {
-    // Update the background image
+  // Only update if the provider has changed
+  if (provider !== currentProvider && providerInfo) {
+    currentProvider = provider; // Update the current provider
+
+    // Update the background image with animation
     const providerBg = document.getElementById("provider-bg");
     providerBg.style.backgroundImage = `url(${providerInfo.background})`;
+    providerBg.classList.remove("fade-in");
+    void providerBg.offsetWidth; // Trigger reflow to restart animation
+    providerBg.classList.add("fade-in");
 
-    // Update the logo
+    // Update the logo with animation
     const providerLogo = document.getElementById("provider-logo").querySelector("img");
     providerLogo.src = providerInfo.logo;
     providerLogo.alt = `${provider} logo`;
     providerLogo.title = `${provider} logo`;
+    providerLogo.classList.remove("slide-in");
+    void providerLogo.offsetWidth; // Trigger reflow to restart animation
+    providerLogo.classList.add("slide-in");
 
-    // Update the description
+    // Update the description with animation
     const providerDescription = document.getElementById("provider-description");
     providerDescription.textContent = providerInfo.description;
     providerDescription.setAttribute("aria-label", providerInfo.description); // Add aria-label for accessibility
     providerDescription.setAttribute("alt", `${provider} description`); // Add alt attribute for accessibility
     providerDescription.setAttribute("tabindex", "0"); // Make it focusable
-
-    // Update the provider name
-    //const providerName = document.getElementById("provider-name");
-    //providerName.textContent = provider;
+    providerDescription.classList.remove("fade-in");
+    void providerDescription.offsetWidth; // Trigger reflow to restart animation
+    providerDescription.classList.add("fade-in");
   }
 }
 

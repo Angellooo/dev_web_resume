@@ -309,7 +309,6 @@ img {
   color: var(--second-color); /* Change icon color on hover */
 }
 
-
 .swiper-pagination-bullet {
   background-color: hsl(212, 32%, 40%);
 }
@@ -318,51 +317,7 @@ img {
   background-color: var(--second-color);
 }
 
-/*=============== RESPONSIVE BREAKPOINTS ===============*/
-
-@media screen and (max-width: 1024px) {
-  #provider-description {
-    font-size: 1.8rem;
-    line-height: 1.3;
-  }
-  #provider-info {
-    height: 40%;
-  }
-  #provider-logo {
-    width: 50%;
-    max-width: 200px;
-  }
-}
-@media screen and (max-width: 768px) {
-  #certificates-section {
-    flex-direction: column;
-  }
-  .left-container,
-  .right-container {
-    flex: 1 0 auto;
-    width: 100%;
-  }
-  #provider-logo {
-    width: 60%;
-    max-width: 250px;
-  }
-  #provider-description {
-    font-size: 1.7rem;
-    line-height: 1.4;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  #provider-logo {
-    width: 70%;
-    max-width: 300px;
-  }
-  #provider-description {
-    font-size: 1.3rem;
-    line-height: 1.1;
-  }
-}
-
+/*=============== BADGES AND ICONS ===============*/
 
 /* Badge Container */
 .badge-container {
@@ -424,9 +379,88 @@ img {
   transition: opacity 0.3s ease;
 }
 
+/*=============== RESPONSIVE BREAKPOINTS ===============*/
+
+@media screen and (max-width: 1024px) {
+  #provider-description {
+    font-size: 1.8rem;
+    line-height: 1.3;
+  }
+  #provider-info {
+    height: 40%;
+  }
+  #provider-logo {
+    width: 50%;
+    max-width: 200px;
+  }
+}
+@media screen and (max-width: 768px) {
+  #certificates-section {
+    flex-direction: column;
+  }
+  .left-container,
+  .right-container {
+    flex: 1 0 auto;
+    width: 100%;
+  }
+  #provider-logo {
+    width: 60%;
+    max-width: 250px;
+  }
+  #provider-description {
+    font-size: 1.7rem;
+    line-height: 1.4;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #provider-logo {
+    width: 70%;
+    max-width: 300px;
+  }
+  #provider-description {
+    font-size: 1.3rem;
+    line-height: 1.1;
+  }
+}
+
 @media screen and (max-width: 480px) {
   .verified-badge:hover::after, .professional-certificate:hover::after, .specialization-certificate:hover::after {
       left: auto; /* Reset left positioning */
       right: calc(100% + 10px); /* Position to the left of the badge */
+  }
+}
+
+/*=============== PROVIDER ANIMATION ===============*/
+
+/* Animation for fading in */
+.fade-in {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0.8;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Animation for sliding in */
+.slide-in {
+  animation: slideIn 1.5s ease-in-out;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0.8;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
