@@ -332,7 +332,7 @@ img {
 }
 
 /* Individual Badges */
-.verified-badge {
+.verified-badge, .with-honors-badge {
   width: 24px; /* Default size */
   height: 24px;
   cursor: pointer;
@@ -363,7 +363,11 @@ img {
   background: url('../images/icons/specialization_badge.svg') no-repeat center;
 }
 
-.verified-badge:hover::after, .professional-certificate:hover::after, .specialization-certificate:hover::after {
+.with-honors-badge{
+  background: url('../images/icons/with_honors_badge.svg') no-repeat center;
+}
+
+.verified-badge:hover::after, .with-honors-badge:hover::after, .professional-certificate:hover::after, .specialization-certificate:hover::after {
   content: attr(title); /* Display the title attribute */
   position: absolute;
   top: -30px; /* Position above the badge */
