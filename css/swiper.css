@@ -137,7 +137,7 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url('../images/testing/black_background.jpg');
+  background-image: url('../images/black_background.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-color: var(--container-color);

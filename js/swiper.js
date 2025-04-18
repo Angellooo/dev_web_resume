@@ -1,13 +1,13 @@
 const providerData = {
   IBM: {
     description: "IBM is an American multinational technology company headquartered in Armonk, New York and present in over 175 countries. Is the largest industrial research organization in the world, providing certifications that validate expertise in cutting-edge technologies.",
-    logo: "./images/testing/brands/ibm_logo_white.svg",
-    background: "./images/testing/brands/ibm_background.jpeg"
+    logo: "./images/brands/ibm_logo_white.svg",
+    background: "./images/brands/ibm_background.jpeg"
   },
   UPenn: {
     description: "The University of Pennsylvania is a private Ivy League research university in Philadelphia. It is one of the oldest universities in the United States and is known for its prestigious programs in business, law, and medicine. UPenn also offers cutting-edge certifications that empower professionals to excel in their careers.",
-    logo: "./images/testing/brands/upenn_logo_white.png",
-    background: "./images/testing/brands/upenn_background.jpg"
+    logo: "./images/brands/upenn_logo_white.png",
+    background: "./images/brands/upenn_background.jpg"
   }
 };
 
@@ -41,7 +41,6 @@ let swiperCards = new Swiper(".card__content", {
   enabled: true,
   followFinger: true,
   passiveListeners: true,
-  preventClicks: true,
   
   /* NEW */
 
