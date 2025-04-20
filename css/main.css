@@ -2854,8 +2854,8 @@
   position: relative;
   font-family: "montserrat-bold", sans-serif;
   font-size: 1.5rem;
-  background-color: rgba(255, 255, 255, 0.95); /* Bright background for better readability */
-  color: rgb(84, 84, 84); /* Darker text for better contrast */
+  background-color: rgba(27, 27, 27, 0.908); /* Bright background for better readability */
+  color: rgb(235, 235, 235); /* Darker text for better contrast */
   padding: 30px; /* Increased padding for a cleaner look */
   border-radius: 10px; /* Slightly rounded corners */
   text-align: center;
@@ -2880,6 +2880,10 @@
   }
 }
 
+#modal-url-preview{
+  margin-bottom: 0;
+}
+
 /* Modal Buttons */
 .modal-buttons {
   margin-top: 10%;
@@ -2888,7 +2892,7 @@
 }
 
 .modal-button {
-  border: 1px solid gray; /* Solid border for better visibility */
+  border: 1px solid rgb(153, 153, 153); /* Solid border for better visibility */
   border-radius: 5px;
   cursor: pointer;
   font-size: 16px;
@@ -2898,24 +2902,24 @@
 
 .modal-button#accept-button {
   background-color: rgba(255, 255, 255, 0.1);
-  color: gray;
+  color: rgb(215, 215, 215);
 }
 
 .modal-button#accept-button:hover {
   background-color: rgb(155, 247, 132);
   transform: scale(1.05); /* Slight zoom on hover */
-  color: rgb(72, 72, 72);
+  color: hsl(0, 0%, 12%);
 }
 
 .modal-button#cancel-button {
   background-color: rgba(255, 255, 255, 0.1);
-  color: gray;
+  color: rgb(215, 215, 215);
 }
 
 .modal-button#cancel-button:hover {
   background-color: rgb(255, 155, 155);
   transform: scale(1.05); /* Slight zoom on hover */
-  color: rgb(72, 72, 72);
+  color: hsl(0, 0%, 12%);
 }
 
 /* Show Modal */
