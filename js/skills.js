@@ -14,7 +14,7 @@ const certificates = [
       "Open Web Application Security Project (OWASP)", "Pandas", "Python", 
       "Relational Database", "Representational State Transfer (REST)", "Security", "Serverless", 
       "Shell Scripting", "Software Architecture", "Software Development Lifecycle", 
-      "Software Engineering", "SQL", "Telemetry", "Tracing", "Web Application",
+      "Software Engineering", "SQL", "Telemetry", "Tracing", "Web Application", "Back-End Development"
     ]
   },
   {
@@ -24,20 +24,20 @@ const certificates = [
     skills: [
       "Application Architecture and Design", "Data Structures", "Distributed Version Control Systems", 
       "Git", "Linux", "Python", "Shell Scripting", "Software Development Lifecycle", 
-      "Software Engineering", "Software Testing and Deployment"
+      "Software Engineering", "Software Testing and Deployment", "Communication", "Software Architecture", "GitHub", "Computer Programming", "Collaboration", "Leadership and Management", "Programming Principles"
     ]
   },
   {
     name: "IBM Python Project for AI and Application Development",
     verifiedBy: "Credly",
     badgeImage: "./images/certificates/IBM_python_project_for_ai_and_application_development.png",
-    skills: ["Artificial Intelligence", "Data Science", "Python"]
+    skills: ["Artificial Intelligence", "Data Science", "Python", "Web Application", "Flask", "Application Development"]
   },
   {
     name: "IBM Python for Data Science and AI",
     verifiedBy: "Credly",
     badgeImage: "./images/certificates/IBM_python_for_data_science_and_ai.png",
-    skills: ["Bokeh", "Matplotlib", "Python"]
+    skills: ["Bokeh", "Matplotlib", "Python", "Pandas", "Data Analysis", "Data Science", "Numpy"]
   },
   {
     name: "IBM Application Development using Microservices and Serverless",
@@ -45,14 +45,14 @@ const certificates = [
     badgeImage: "./images/certificates/IBM_application_development_using_microservices_and_serverless.png",
     skills: [
       "Containers", "cURL", "Docker", "Flask", "GraphQL", "Microservices", "Postman", 
-      "Representational State Transfer (REST)", "Serverless", "Swagger"
+      "Representational State Transfer (REST)", "Serverless", "Swagger", "Cloud Applications", "OpenShift"
     ]
   },
   {
     name: "IBM Back-end Application Development Capstone Project",
     verifiedBy: "Credly",
     badgeImage: "./images/certificates/IBM_back_end_application_development_capstone_project.png",
-    skills: ["Back-End Development", "Django", "Docker", "MongoDB"]
+    skills: ["Back-End Development", "Django", "Docker", "MongoDB", "Flask", "Representational State Transfer (REST)"]
   },
   {
     name: "IBM Developing Applications with SQL, Databases, and Django",
@@ -60,14 +60,14 @@ const certificates = [
     badgeImage: "./images/certificates/IBM_developing_applications_with_sql_databases_and_django.png",
     skills: [
       "Cloud Database Fundamentals", "CSS", "Django", "GitHub", "HTML", 
-      "Object-Oriented Programming", "Object-Relational Mapping", "Python", "SQL"
+      "Object-Oriented Programming", "Object-Relational Mapping", "Python", "SQL", "Back-End Applications", "Relational Database"
     ]
   },
   {
     name: "IBM Monitoring and Observability for Development and DevOps",
     verifiedBy: "Credly",
     badgeImage: "./images/certificates/IBM_monitoring_and_observability_for_development_and_devops.png",
-    skills: ["Logging", "Monitoring", "Observability", "Telemetry", "Tracing"]
+    skills: ["Logging", "Monitoring", "Observability", "Telemetry", "Tracing", "DevOps"]
   },
   {
     name: "IBM Container & Kubernetes Essentials V2",
@@ -75,7 +75,7 @@ const certificates = [
     badgeImage: "./images/certificates/IBM_container_and_kubernetes_essentials_V2.png",
     skills: [
       "Auto-scaling", "Cloud", "Containers", "Istio", "Kubernetes", "OpenShift", 
-      "ReplicaSets", "YAML"
+      "ReplicaSets", "YAML", "Cloud Native", "Docker"
     ]
   },
   {
@@ -83,7 +83,7 @@ const certificates = [
     verifiedBy: "Credly",
     badgeImage: "./images/certificates/IBM_linux_commands_and_shell_scripting_essentials.png",
     skills: [
-      "Shell Scripting", "Cron Jobs", "Crontab", "Linux", "Shebang", "UNIX Shell Commands"
+      "Shell Scripting", "Cron Jobs", "Crontab", "Linux", "Shebang", "UNIX Shell Commands", "Extract Transform and Load (ETL)", "Linux Commands"
     ]
   },
   {
@@ -92,7 +92,7 @@ const certificates = [
     badgeImage: "./images/certificates/IBM_git_and_github_essentials.png",
     skills: [
       "Code Repositories", "Collaboration", "Distributed Version Control Systems", "Git", "GitHub", 
-      "GitLab", "Merge", "Open Source", "Pull Request", "Social Coding", "Software Development"
+      "GitLab", "Merge", "Open Source", "Pull Request", "Social Coding", "Software Development", "Cloning and forking"
     ]
   },
   {
@@ -100,8 +100,8 @@ const certificates = [
     verifiedBy: "Credly",
     badgeImage: "./images/certificates/IBM_software_engineering_essentials.png",
     skills: [
-      "Basic Programming Concepts", "Software Architecture", "Software Development Lifecycle", 
-      "Software Development Tools", "Software Engineering"
+      "Software Architecture", "Software Development Lifecycle", 
+      "Software Development Tools", "Software Engineering", "Computer Programming", "Programming Principles", "Agile and Scrum", "Communication", "Python"
     ]
   },
   {
@@ -159,6 +159,7 @@ const skills = [
   { name: "Cloning and Forking", badgeSupported: true, statuses: [] },
   { name: "Cloud Database Fundamentals", badgeSupported: true, statuses: [] },
   { name: "Cloud Native", badgeSupported: true, statuses: [] },
+  { name: "Cloud", badgeSupported: true, statuses: [] },
   { name: "Containers", badgeSupported: true, statuses: [] },
   { name: "Distributed Version Control Systems", badgeSupported: true, statuses: [] },
   { name: "Extract Transform and Load (ETL)", badgeSupported: true, statuses: [] },
@@ -191,13 +192,15 @@ const skills = [
   { name: "Merge", badgeSupported: true, statuses: [] },
   { name: "Pull Request", badgeSupported: true, statuses: [] },
   { name: "Social Coding", badgeSupported: true, statuses: [] },
-  { name: "Basic Programming Concepts", badgeSupported: true, statuses: [] },
   { name: "Software Development Tools", badgeSupported: true, statuses: [] },
   { name: "Security Engineering", badgeSupported: true, statuses: [] },
   { name: "Programming Principles", badgeSupported: true, statuses: [] },
   { name: "Web Development", badgeSupported: false, statuses: ["IN DEMAND", "FUTURE PROOF"] },
   { name: "Database Development", badgeSupported: false, statuses: ["IN DEMAND", "FUTURE PROOF"] },
-  { name: "JavaScript", badgeSupported: false, statuses: [] }
+  { name: "JavaScript", badgeSupported: false, statuses: [] },
+  { name: "Computer Programming", badgeSupported: true, statuses: [] },
+  { name: "Communication", badgeSupported: true, statuses: [] },
+  { name: "Leadership and Management", badgeSupported: true, statuses: [] },
 
 ];
 
@@ -273,14 +276,17 @@ const skillSummaries = {
   "Pull Request": "A Pull Request is a mechanism for proposing, discussing, and reviewing code changes before merging them into a main branch, ensuring quality and preventing regressions.",
   "Social Coding": "Social Coding leverages public and private platforms for code sharing, review, and community feedback, accelerating innovation through open collaboration.",
   "Software Development": "Software Development encompasses the full process of designing, coding, testing, and maintaining applications, delivering digital solutions that power modern businesses.",
-  "Basic Programming Concepts": "Basic Programming Concepts—like variables, control flow, and data types—are the building blocks that underpin all software, ensuring developers can write correct and efficient code.",
   "Software Development Tools": "Software Development Tools—including IDEs, debuggers, and build systems—boost developer productivity and code quality by streamlining everyday tasks.",
   "Security Engineering": "Security Engineering applies rigorous design, testing, and monitoring practices to protect applications and infrastructure from threats, safeguarding organizational assets and reputation.",
   "Programming Principles": "Programming Principles—such as SOLID, DRY, and KISS—guide developers toward writing maintainable, scalable, and robust code that stands the test of time.",
   "Back-End Development": "Back-End Development involves building and maintaining the server-side components of applications—handling database interactions, business logic, APIs, and server performance—which form the backbone of any web or mobile service. Back-end development empowers companies to deliver data-driven features and maintain high availability, directly impacting user satisfaction and operational costs.",
   "Cloud Database Fundamentals": "Cloud Database Fundamentals cover the principles of deploying and managing databases on cloud platforms—public, private, or hybrid—so organizations can leverage on-demand provisioning, automated patching, and global distribution of data.",
   "CSS": "CSS (Cascading Style Sheets) is the standard styling language that controls the look, layout, and responsive behavior of web applications, allowing businesses to craft visually engaging and brand-consistent user interfaces.",
-  "Object-Oriented Programming": "Object-Oriented Programming (OOP) is a software design paradigm that uses objects—encapsulating data and behavior—to model real-world entities, promoting modularity, reusability, and maintainability in large codebases."}
+  "Object-Oriented Programming": "Object-Oriented Programming (OOP) is a software design paradigm that uses objects—encapsulating data and behavior—to model real-world entities, promoting modularity, reusability, and maintainability in large codebases.",
+  "Computer Programming": "Computer Programming serves as the foundation for developing software applications, websites, and digital tools. Proficiency in programming allows organizations to automate processes, enhance efficiency, and create scalable solutions tailored to their unique needs.",
+  "Communication": "Effective Communication in IT encompasses the ability to clearly convey ideas, requirements, and feedback among team members, stakeholders, and clients. Strong communication skills facilitate collaboration, problem-solving, and the successful execution of projects",
+  "Leadership and Management": "Leadership and Management involve guiding teams and organizations towards achieving strategic objectives through effective decision-making. In the IT industry, strong leadership is essential for navigating technological advancements and ensuring that projects align with business goals. Effective leaders cultivate a positive organizational culture, drive change, and empower employees to contribute to the company's success .​",
+}
 
 const ul = document.querySelector('#skills-wallet .ps-list');
 
