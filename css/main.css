@@ -2044,7 +2044,9 @@
    padding: 15rem 0 15rem;
  }
  #portfolio .intro-wrap {
-   background: #111111;
+  overflow: visible; /* Allow tooltips to overflow */
+  position: relative; /* Ensure proper positioning context */
+  background: #111111;
  }
  #portfolio .section-intro {
   padding-bottom: 0;
@@ -2278,11 +2280,6 @@
   * responsive:
   * portfolio
   * ------------------------------------------------------------------- */
- @media only screen and (max-width: 768px) {
-   #portfolio .intro-wrap {
-     padding: 12rem 0 21rem;
-   }
- }
  @media only screen and (max-width: 600px) {
    #portfolio .bricks-wrapper .brick {
      float: none;
