@@ -293,7 +293,7 @@ const ul = document.querySelector('#skills-wallet .ps-list');
 // Render into the DOM
 skills.forEach(skill => {
   const li = document.createElement('li');
-  li.className = 'skill-card';
+  li.className = 'skill-card animate-this'; // Add the animate-this class
 
   // Skill name & link
   li.innerHTML = `
@@ -329,6 +329,22 @@ skills.forEach(skill => {
 
   ul.appendChild(li);
 });
+
+// Reinitialize Waypoints after rendering skills
+if (typeof Waypoint !== 'undefined') {
+  const skillCards = document.querySelectorAll('.skill-card.animate-this');
+  skillCards.forEach(card => {
+    new Waypoint({
+      element: card,
+      handler: function(direction) {
+        if (direction === 'down' && !card.classList.contains('animated')) {
+          card.classList.add('fadeInUp', 'animated'); // Add animation classes
+        }
+      },
+      offset: '95%' // Trigger when 95% of the element is visible
+    });
+  });
+}
 
 // Populate tooltips for verified skills
 document.querySelectorAll('.verified-skill').forEach(icon => {

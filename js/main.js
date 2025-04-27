@@ -232,43 +232,57 @@
 
   /* Animations
 	* ------------------------------------------------------- */
+	/**
+	 * Initializes and handles scroll-triggered animations for elements with the class `animate-this`.
+	 * 
+	 * This function checks if CSS animations are supported in the browser. If supported, it uses the 
+	 * Waypoints library to trigger animations when elements with the `animate-this` class come into view.
+	 * Each element can specify a custom animation effect using the `data-animate` attribute. If no custom 
+	 * animation is specified, a default animation effect (`cfg.defAnimation`) is applied.
+	 * 
+	 * The animations are triggered only once per element and are staggered with a slight delay for a 
+	 * cascading effect.
+	 * 
+	 * Dependencies:
+	 * - jQuery
+	 * - Waypoints library
+	 * 
+	 * @function
+	 * @global
+	 */
 	var ssAnimations = function() {
-
 		if (!$("html").hasClass('no-cssanimations')) {
-			$('.animate-this').waypoint({
-				handler: function(direction) {
-
-					var defAnimationEfx = cfg.defAnimation;
-
-					if ( direction === 'down' && !$(this.element).hasClass('animated')) {
-						$(this.element).addClass('item-animate');
-
-						setTimeout(function() {
-							$('body .animate-this.item-animate').each(function(ctr) {
-								var el       = $(this),
-								animationEfx = el.data('animate') || null;	
-
-	                  	if (!animationEfx) {
-			                 	animationEfx = defAnimationEfx;	                 	
-			               }
-
-			              	setTimeout( function () {
-									el.addClass(animationEfx + ' animated');
-									el.removeClass('item-animate');
-								}, ctr * 30);
-
-							});								
-						}, 100);
+		  $('.animate-this').waypoint({
+			handler: function(direction) {
+			  var defAnimationEfx = cfg.defAnimation;
+	  
+			  if (direction === 'down' && !$(this.element).hasClass('animated')) {
+				$(this.element).addClass('item-animate');
+	  
+				setTimeout(function() {
+				  $('body .animate-this.item-animate').each(function(ctr) {
+					var el = $(this),
+						animationEfx = el.data('animate') || null;
+	  
+					if (!animationEfx) {
+					  animationEfx = defAnimationEfx;
 					}
-
-					// trigger once only
-	       		this.destroy(); 
-				}, 
-				offset: '95%'
-			}); 
+	  
+					setTimeout(function() {
+					  el.addClass(animationEfx + ' animated');
+					  el.removeClass('item-animate');
+					}, ctr * 200); // Delay of 200ms between each skill
+				  });
+				}, 100);
+			  }
+	  
+			  // Trigger once only
+			  this.destroy();
+			},
+			offset: '95%' // Trigger when 95% of the element is visible
+		  });
 		}
-
-	};
+	  };
 	
 
   /* Intro Animation
