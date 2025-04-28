@@ -1,0 +1,203 @@
+/* Skills Section */
+.portfolio-skill {
+  max-width: 100%;
+  padding: 5rem 0 5rem;
+}
+
+.ps-title {
+  color: #f1f1f1;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.ps-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+.skill-card {
+  background: #2b2b2b85;
+  border-radius: 1rem; /* Smoother borders */
+  padding: 1rem;
+  display: flex;
+  align-items: center; /* Align items horizontally */
+  gap: 0.75rem; /* Space between items */
+  min-width: 200px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-5px); /* Slight hover effect */
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.skill-name {
+  font-size: 100%;
+  font-weight: 500;
+  text-decoration: none;
+  color: #f1f1f1;
+  flex: 1; /* Allow the name to take up available space */
+}
+
+.status-tags {
+  display: flex;
+  gap: 0.75rem; /* Reduce the gap between tags */
+  flex-wrap: wrap;
+  margin-left: auto; /* Ensure tags stay aligned to the right */
+}
+
+.status-tag {
+  background: #e5e7eb;
+  border-radius: 9999px;
+  padding: 0.15rem 0.7rem; /* Adjust padding for smaller height */
+  font-size: 1.1rem; /* Slightly smaller font size */
+  line-height: 1.2; /* Adjust line height for better vertical alignment */
+  display: flex; /* Enable flexbox for centering */
+  justify-content: center; /* Center text horizontally */
+  align-items: center; /* Center text vertically */
+}
+
+.status-text{
+  font-size: 1.25rem;
+  line-height: normal;
+}
+
+/* Tooltip */
+.tooltip {
+  visibility: hidden;
+  background: #1a1a1b;
+  color: #fff;
+  text-align: left;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  position: absolute;
+  z-index: 10;
+  bottom: 125%; /* Position above the element */
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: normal;
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  width: 300px; /* Fixed width for consistent layout */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 
+              0 0 15px rgba(255, 255, 255, 0.5), /* Bright white glow */
+              0 0 30px rgba(255, 255, 255, 0.3); /* Softer outer glow */
+}
+
+.tooltip-title {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  font-size: 1.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.certified-skill-icon {
+  width: 14px;
+  height: 14px;
+  margin-left: 0.5rem;
+}
+
+.tooltip-certificates {
+  margin-bottom: 1rem;
+}
+
+.certificate {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+
+.certificate-badge {
+  width: 50px;
+  height: 50px;
+  margin-right: 0.5rem;
+}
+
+.certificate-name {
+  font-size: 1.4rem;
+  line-height: 2rem;
+  font-weight: bold;
+}
+
+.verified-by-credly, .verified-by-coursera {
+  display: flex;
+  align-items: center;
+  font-size: 0.9rem;
+  color: #ccc;
+  margin-top: 0.2rem;
+}
+
+.certificate-name, .verified-by-credly, .verified-by-coursera{
+  margin-left: 1.3rem;
+}
+
+.credly-icon, .coursera-icon {
+  width: 16px;
+  height: 16px;
+  margin-right: 0.3rem;
+}
+
+.tooltip-summary {
+  font-size: 1.3rem;
+  line-height: 1.7rem;
+  color: #ccc;
+}
+
+.status-tag:hover .tooltip,
+.verified-skill:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+}
+
+.status-tag.in-demand {
+  background-color: rgb(212, 230, 253);
+  color: rgb(18, 48, 84);
+}
+
+.status-tag.trending {
+  background-color: rgb(213, 255, 247);
+  color: rgb(18, 48, 84);
+}
+
+.status-tag.future-proof {
+  background-color: rgb(255, 242, 213);
+  color: rgb(128, 96, 0);
+}
+
+/* Verified Skill Icon */
+.verified-skill {
+  width: 24px; /* Default size */
+  height: 24px;
+  cursor: pointer;
+  font-size: 1.1rem; /* Slightly smaller font size */
+  line-height: 1.2rem; /* Adjust line height for better vertical alignment */
+  object-fit: contain; /* Ensure the image scales proportionally */
+  position: relative; /* Required for positioning the tooltip */
+}
+
+.verified-skill[data-badge-provider="credly"] {
+  background: url('../images/icons/verify_badge_credly.svg') no-repeat center;
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 768px) {
+  .ps-list {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .skill-card {
+      max-width: 90%;
+  }
+}
