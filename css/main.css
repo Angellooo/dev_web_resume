@@ -17,13 +17,14 @@
  *  10. home
  *  11. about
  *  12. services
- *  13. certificates
+ *  13. experience
+ *  14. certificates
  *  14. portfolio
- *  15. testimonials
- *  16. clients
- *  17. contact
- *  18. modal
- *  19. footer
+ *  16. testimonials
+ *  17. clients
+ *  18. contact
+ *  19. modal
+ *  20. footer
  *
  * =================================================================== */
 
@@ -1803,14 +1804,11 @@
  #about .about-wrap {
    max-width: 850px;
  }
- #about span {
-   color: #07617d;
- }
  #about h3 {
    font-family: "montserrat-bold", sans-serif;
    font-size: 1.8rem;
    line-height: 1.667;
-   color: #07617d;
+   color: #222222;
    text-transform: uppercase;
    letter-spacing: .3rem;
    position: relative;
@@ -1820,7 +1818,7 @@
    content: "";
    width: 3px;
    height: 9.6rem;
-   background-color: rgba(149, 149, 149, 0.7);
+   background-color: #D813E6;
    margin: 0 auto 2.4rem;
  }
  #about .lead {
@@ -1905,8 +1903,7 @@
   *
   * ------------------------------------------------------------------- */
  #services {
-   background-color: #19191b;
-   background-image: url(../images/services-bg.jpg);
+   background-color: #111111;
    background-repeat: no-repeat;
    background-position: center;
    -webkit-background-size: cover;
@@ -2018,8 +2015,188 @@
    }
  }
  
+
  /* ===================================================================
-  *  13. Certificates Section
+  *  13. testimonials - (_layout.scss)
+  *
+  * ------------------------------------------------------------------- */
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 900;
+  }
+  
+  .purple {
+    color: #D813E6;
+  }
+
+  .section-title {
+    color: #000000;
+    font-weight: bold;
+  }
+
+  .experience_container{
+    width: 100%;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  
+  #experience {
+    padding: 50px 0px;
+    background-color: #FFFFFF;
+  }
+  
+  #experience .jobs {
+    text-align: left;
+    margin-top: 40px;
+  }
+  
+  #experience .jobs p {
+    margin-bottom: 0;
+  }
+  
+  #experience .jobs .job-item {
+    border-left: 2px solid #D813E6;
+    padding: 0px 40px 0px;
+    padding-bottom: 20px;
+    position: relative;
+  }
+  
+  #experience .jobs .job-item .date, #experience .jobs .job-item .company {
+    color: black;
+    font-weight: 600;
+  }
+  
+  #experience .jobs .job-item .date {
+    padding-bottom: 20px;
+  }
+  
+  #experience .jobs .job-item .date::before {
+    content: '';
+    width: 30px;
+    height: 2px;
+    background-color: #D813E6;
+    display: block;
+    position: absolute;
+    left: 0px;
+    top: 0.6rem;
+  }
+  
+  #experience .jobs .job-item .date::after {
+    content: '';
+    width: 15px;
+    height: 15px;
+    background-color: white;
+    border: 2px solid #D813E6;
+    border-radius: 50%;
+    display: block;
+    position: absolute;
+    left: 0px;
+    top: 0rem;
+    -webkit-transform: translate(-50%, 25%);
+            transform: translate(-50%, 25%);
+  }
+  
+  #experience .jobs .job-item .position {
+    font-weight: 600;
+    color: #D813E6;
+    font-size: 1.3rem;
+  }
+  
+  #experience .jobs .job-item .company {
+    padding-bottom: 20px;
+  }
+  
+  #experience .jobs .first {
+    padding-top: 60px;
+  }
+  
+  #experience .jobs .first .date::before {
+    top: 70px;
+  }
+  
+  #experience .jobs .first .date::after {
+    top: 60px;
+  }
+  
+  #experience .jobs .fourth {
+    padding-bottom: 60px;
+  }
+  
+  @media (min-width: 768px) {
+    h1 {
+      font-size: 3rem;
+    }
+    .section-title {
+      font-size: 1.5rem;
+      position: relative;
+      padding-top: 20px;
+    }
+    .section-title::before {
+      content: '';
+      width: 2px;
+      height: 120px;
+      display: block;
+      background-color: #D813E6;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      -webkit-transform: translateY(-100%);
+              transform: translateY(-100%);
+    }
+    #experience {
+      padding-bottom: 0px;
+      margin-bottom: -50px;
+    }
+    #experience .jobs .job-item {
+      width: 50%;
+      padding: 0px 70px;
+    }
+    #experience .jobs .job-item .date::before {
+      width: 50px;
+    }
+    #experience .jobs .second, #experience .jobs .fourth {
+      margin-left: auto;
+    }
+    #experience .jobs .first {
+      padding-top: 60px;
+    }
+    #experience .jobs .first, #experience .jobs .third {
+      margin-left: 2px;
+      text-align: right;
+      padding-left: 0;
+      border-left: 0px;
+      border-right: 2px solid #D813E6;
+    }
+    #experience .jobs .first .date::before, #experience .jobs .third .date::before {
+      left: 100%;
+      -webkit-transform: translateX(-100%);
+              transform: translateX(-100%);
+    }
+    #experience .jobs .first .date::after, #experience .jobs .third .date::after {
+      left: 100%;
+    }
+    #experience .jobs .fourth {
+      padding-bottom: 150px;
+    }
+  }
+  
+  @media (min-width: 992px) {
+    h1 {
+      font-size: 4rem;
+    }
+  }
+  
+  @media (min-width: 1200px) {
+    h1 {
+      font-size: 4.4rem;
+    }
+  }
+
+
+ /* ===================================================================
+  *  14. Certificates Section
   *
   * ------------------------------------------------------------------- */
   #intro-certificates {
@@ -2041,7 +2218,7 @@
   }  
 
  /* ===================================================================
-  *  14. portfolio - (_layout.scss)
+  *  15. portfolio - (_layout.scss)
   *
   * ------------------------------------------------------------------- */
  #portfolio {
@@ -2301,7 +2478,7 @@
  
  
  /* ===================================================================
-  *  15. testimonials - (_layout.scss)
+  *  16. testimonials - (_layout.scss)
   *
   * ------------------------------------------------------------------- */
  #testimonials {
@@ -2313,7 +2490,7 @@
    font-family: "montserrat-bold", sans-serif;
    font-size: 1.8rem;
    line-height: 1.667;
-   color: #07617d;
+   color: #222222;
    text-transform: uppercase;
    letter-spacing: .3rem;
    position: relative;
@@ -2469,7 +2646,7 @@
  
  
  /* ===================================================================
-  *  16. clients - (_layout.scss)
+  *  17. clients - (_layout.scss)
   *
   * ------------------------------------------------------------------- */
  #clients {
@@ -2544,7 +2721,7 @@
  
  
  /* ===================================================================
-  *  17. contact - (_layout.scss)
+  *  18. contact - (_layout.scss)
   *
   * ------------------------------------------------------------------- */
  #contact {
@@ -2837,7 +3014,7 @@
  }
  
   /* ===================================================================
-  *  18. Modal - (_layout.scss)
+  *  19. Modal - (_layout.scss)
   *
   * ------------------------------------------------------------------- */
   
@@ -2941,7 +3118,7 @@
 }
 
  /* ===================================================================
-  *  19. footer - (_layout.scss)
+  *  20. footer - (_layout.scss)
   *
   * ------------------------------------------------------------------- */
  footer {
