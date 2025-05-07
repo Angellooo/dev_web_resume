@@ -82,12 +82,19 @@ function updateProviderInfo() {
   if (provider !== currentProvider && providerInfo) {
     currentProvider = provider; // Update the current provider
 
-    // Update the background image with animation
-    const providerBg = document.getElementById("provider-bg");
-    providerBg.style.backgroundImage = `url(${providerInfo.background})`;
-    providerBg.classList.remove("fade-in");
-    void providerBg.offsetWidth; // Trigger reflow to restart animation
-    providerBg.classList.add("fade-in");
+    // Update the background image of the left container with animation
+    const providerBgLeft = document.getElementById("provider-bg-left");
+    providerBgLeft.style.backgroundImage = `url(${providerInfo.background})`;
+    providerBgLeft.classList.remove("fade-in");
+    void providerBgLeft.offsetWidth; // Trigger reflow to restart animation
+    providerBgLeft.classList.add("fade-in");
+
+    // Update the background image of the right container with animation
+    const providerBgRight = document.getElementById("provider-bg-right");
+    providerBgRight.style.backgroundImage = `url(${providerInfo.background})`;
+    providerBgRight.classList.remove("fade-in");
+    void providerBgRight.offsetWidth; // Trigger reflow to restart animation
+    providerBgRight.classList.add("fade-in");
 
     // Update the logo with animation
     const providerLogo = document.getElementById("provider-logo").querySelector("img");
