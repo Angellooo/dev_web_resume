@@ -1825,7 +1825,7 @@
    font-family: "montserrat-regular", sans-serif;
    font-size: 2.2rem; /* Decrease font size */
    line-height: 2.4; /* Adjust line height for better readability */
-   color: #4f4f4f;
+   color: #353535;
    margin-bottom: 3.2rem;
    max-width: 800px; /* Expand width */
    margin: 0 auto; /* Center the text */
@@ -2107,6 +2107,10 @@
   #experience .jobs .job-item .company {
     padding-bottom: 20px;
   }
+
+  #experience .jobs .job-item .job_description{
+    text-align: justify;
+  }
   
   #experience .jobs .first {
     padding-top: 60px;
@@ -2157,15 +2161,16 @@
       width: 50px;
     }
     #experience .jobs .second, #experience .jobs .fourth {
+      padding-right: 150px;
       margin-left: auto;
     }
     #experience .jobs .first {
       padding-top: 60px;
     }
     #experience .jobs .first, #experience .jobs .third {
+      padding-left: 150px;
       margin-left: 2px;
       text-align: right;
-      padding-left: 0;
       border-left: 0px;
       border-right: 2px solid #D813E6;
     }
