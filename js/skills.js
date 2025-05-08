@@ -400,3 +400,14 @@ document.querySelectorAll('.tooltip').forEach(tooltip => {
     }
   });
 });
+
+// Select all skill cards
+const skillCards = document.querySelectorAll('.skill-card.animate-this');
+
+// Add an event listener to detect when the animation ends
+skillCards.forEach(card => {
+  card.addEventListener('animationend', () => {
+    card.classList.remove('fadeInUp'); // Remove the fadeInUp class after animation ends
+    card.classList.add('animation-complete'); // Add a class to indicate the animation is complete
+  });
+});
