@@ -201,8 +201,8 @@ img {
   position: relative;
   background: linear-gradient(85deg, #020202a8, transparent);
   padding-top: 1.5rem;
-  border-top: solid 2px white;
-  border-right: solid 1px white;
+  border-top: solid 2px rgb(180, 180, 180);
+  border-right: solid 1px rgb(180, 180, 180);
   border-top-left-radius: inherit;
   border-top-right-radius: inherit;
 }
@@ -232,7 +232,7 @@ img {
   background-color: var(--container-color);
   padding: 1.5rem 2rem;
   border-radius: 1rem;
-  border-right: solid 1px white;
+  border-right: solid 1px rgb(180, 180, 180);
   border-top-left-radius: unset;
   border-top-right-radius: unset;
   text-align: center;
