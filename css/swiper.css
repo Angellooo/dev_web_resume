@@ -62,9 +62,8 @@ img {
 }
 
 #provider-logo {
-  position: absolute;
   z-index: 1;
-  width: 50%;
+  width: 75%;
   min-width: 40%;
   height: 85%;
   margin-top: 1rem;
@@ -427,7 +426,7 @@ img {
     max-width: 300px;
   }
   #provider-description {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     line-height: 1.1;
   }
 }
