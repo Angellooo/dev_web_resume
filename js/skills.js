@@ -300,7 +300,7 @@ skills.forEach(skill => {
     ${skill.badgeSupported
       ? `<div class="verified-skill" data-skill="${skill.name}" data-badge-provider="credly">
           <span class="tooltip">
-            <div class="tooltip-title">CERTIFIED <img src="images/icons/certified-skill.svg" alt="Certified Skill" class="certified-skill-icon"></div>
+            <div class="tooltip-title">CERTIFIED <img src="images/icons/certified_skill.svg" alt="Certified Skill" class="certified-skill-icon"></div>
             <div class="tooltip-certificates"></div>
             <div class="tooltip-summary"></div>
           </span>

@@ -53,9 +53,17 @@
    ================================================== -->
    <header> 
 
+
+
    	<div class="header-logo">
 	      <a href="index.html">Angello Gonzalez</a>
 	   </div> 
+
+	   	<!-- Download Resume Button -->
+    <a href="resume.pdf" class="download-resume-btn" target="_blank" title="Download Resume">
+        <span>Download Resume</span>
+        <img src="images/icons/download_icon.svg" alt="Download Icon" class="download-icon">
+    </a>
 
 		<a id="header-menu-trigger" href="#0">
 		 	<span class="header-menu-text">Menu</span>
@@ -72,8 +80,11 @@
 				<li class="current"><a class="smoothscroll" href="#home" title="Home">Home</a></li>
 				<li><a class="smoothscroll" href="#about" title="About">About</a></li>
 				<li><a class="smoothscroll" href="#services" title="Services">Services</a></li>
+				<li><a class="smoothscroll" href="#experience" title="Experience">Experience</a></li>
 				<li><a class="smoothscroll" href="#intro-certificates" title="Certificates">Certificates</a></li>
-				<li><a class="smoothscroll" href="#portfolio" title="Skills">Skills</a></li>
+				<li><a class="smoothscroll" href="#education" title="Education">Education</a></li>
+				<li><a class="smoothscroll" href="#skills" title="Skills">Skills</a></li>
+				<li><a class="smoothscroll" href="#testimonials" title="Testimonials">Testimonials</a></li>
 				<li><a class="smoothscroll" href="#contact" title="Contact">Contact</a></li>
 				<li><a class="smoothscroll" href="" target="_blank" rel="noreferrer noopener" title="Resume">Download Resume</a></li>							
 			</ul>	
@@ -103,11 +114,11 @@
 		   	<div class="row">
 		   		<div class="col-twelve">		   			
 			  		
-			  				<h3 class="animate-intro">I am</h3>
-				  			<h1 class="animate-intro">Angello Gonzalez</h1>
+			  				<h3 class="animate-intro">I'm</h3>
+				  			<h1 class="animate-intro">Angello</h1>
 							<h3 class="animate-intro">A Software Engineer specialize in:</h3>
 							<h3 class="animate-intro">
-								<span id="typed" class="highlight"></span>
+								<span id="typed" class="home-highlight"></span>
 							</h3>
 
 				  			<div class="more animate-intro">
@@ -138,19 +149,7 @@
 		</div>			
    
    </section> <!-- end home -->
-
-    <!-- Initialize Typed.js -->
-	<script>
-        document.addEventListener('DOMContentLoaded', function() {
-            var typed = new Typed('#typed', {
-                strings: ["Python Development", "Back-End Development", "Django", "Flask", "Extract Transform and Load (ETL)", "Business Projects", "SDLC"],
-                typeSpeed: 30,
-                backSpeed: 40,
-                backDelay: 1500,
-                loop: true
-            });
-        });
-    </script>
+   <!-- end home -->
 
     <!-- Other sections of your HTML file -->
 
@@ -166,7 +165,7 @@
                     I am a driven software engineer and Python developer with a passion for creating 
                     <span class="highlight">innovative solutions</span> that optimize processes and drive 
                     <span class="highlight">business success</span>. Specializing in automation systems, ETL workflows, and scalable technologies, I bring a blend of 
-                    <span class="highlight">technical expertise</span> and analytical insight. A <span style="font-style: italic; color: #4f4f4f;">Magna Cum Laude</span> graduate with prestigious certificates from 
+                    <span class="highlight">technical expertise</span> and analytical insight. A <span style="font-style: italic; color: #4f4f4f;">Magna Cum Laude</span> <span class="highlight">Computer Science</span> graduate with prestigious certificates from 
                     <span class="highlight">IBM</span> and the 
                     <span class="highlight">University of Pennsylvania</span>, I am dedicated to delivering exceptional 
                     <span class="highlight">results</span> and empowering teams to achieve their fullest potential.
@@ -184,7 +183,7 @@
    	<div class="overlay"></div>
    	<div class="gradient-overlay"></div>
    	
-   	<div class="row narrow section-intro with-bottom-sep animate-this">
+   	<div class="row narrow section-intro with-bottom-sep-light animate-this">
    		<div class="col-full">
    			
    				<h3>SHOWCASE</h3>
@@ -289,10 +288,10 @@
    <!-- Certificates ================================================== -->
 	<section id="intro-certificates">
 	<div class="intro-wrap">
-		<div class="row narrow section-intro with-bottom-sep animate-this">
+		<div class="row narrow section-intro with-bottom-sep-light animate-this">
 			<div class="col-twelve">
 				<h3>Showcase</h3>
-				<h1>My <span class="highlight">Certificates.</span></h1>  			
+				<h1>My <span class="highlight">Certifications.</span></h1>  			
 				
 				<p class="lead">Some of the certificates I earned from top IT Companies and Universities.</p>	   			
 			</div>   		
@@ -768,13 +767,48 @@
       </div>
   </section>
 
-   <!-- portfolio (Skill section)
+	<!-- Education Section
+	================================================== -->
+	<section id="education">
+	<div class="intro-wrap animate-this">
+		<div class="row narrow section-intro with-bottom-sep-dark animate-this">
+		<div class="col-twelve">
+			<h3>Showcase</h3>
+			<h1>My <span class="highlight">Education.</span></h1>
+			<p class="lead">Academic background and achievements.</p>
+		</div>
+		</div>
+	</div>
+	<div class="row education-content">
+		<div class="col-twelve animate-this">
+		<div class="education-item">
+			<!-- Top-right icon -->
+    		<img src="images/icons/graduate_icon.svg" alt="Graduate Icon" class="education-icon top-right">
+
+			<h4 class="degree-title">Associate's degree in Computer Science</h4>
+			<p class="university-name">Antonio José de Sucre University Institute of Technology</p>
+			<p class="education-date">2017 – 2021</p>
+			<div class="education-award">
+			<span class="award-label"> Magna Cum Laude Graduate | (18.3/20 | 3.66/4.0 GPA)</span>
+			</div>
+			<p class="education-description">
+			Graduated with honors, recognized for outstanding academic performance and dedication to the field of computer science.
+			</p>
+
+			<!-- Bottom-left icon -->
+    		<img src="images/icons/graduate_certification.svg" alt="Certification Icon" class="education-icon bottom-left">
+		</div>
+		</div>
+	</div>
+	</section>
+
+   <!-- skills (Skill section)
    ================================================== -->
-   <section id="portfolio"> <!-- Begin skills section -->
+   <section id="skills"> <!-- Begin skills section -->
    	
    	<div class="intro-wrap animate-this">
 
-   		<div class="row narrow section-intro with-bottom-sep animate-this">
+   		<div class="row narrow section-intro with-bottom-sep-light animate-this">
 	   		<div class="col-twelve">
 	   			<h3>Showcase</h3>
 		   		<h1>My <span class="highlight">Skills.</span></h1>  			
@@ -785,7 +819,7 @@
 
    	</div> <!-- end intro-wrap -->   	
 	
-	<section id="skills-wallet" class="portfolio-skill">
+	<section id="skills-wallet" class="skills-skill">
         <ul id="skills-list" class="ps-list"></ul>
     </section>
 
@@ -832,40 +866,13 @@
    </section> <!-- end testimonials -->
 
 
-	<!-- stats
-   ================================================== -->
-   <section id="clients">
-
-		<div class="row animate-this">
-			<div class="col-twelve">
-
-				<div class="client-lists owl-carousel">
-  					<div><img src="images/clients/mozilla.png" alt=""></div>
-  					<div><img src="images/clients/bower.png" alt=""></div>
-  					<div><img src="images/clients/codepen.png" alt=""></div>
-  					<div><img src="images/clients/envato.png" alt=""></div>
-  					<div><img src="images/clients/firefox.png" alt=""></div>
-  					<div><img src="images/clients/grunt.png" alt=""></div>
-  					<div><img src="images/clients/evernote.png" alt=""></div>
-  					<div><img src="images/clients/github.png" alt=""></div>
-  					<div><img src="images/clients/joomla.png" alt=""></div>
-  					<div><img src="images/clients/jQuery.png" alt=""></div>
-  					<div><img src="images/clients/wordpress.png" alt=""></div>
-				</div>
-				
-			</div> <!-- end col-twelve -->
-		</div> <!-- end row -->
-
-   </section> <!-- end clients -->
-
-
 	<!-- contact
    ================================================== -->
    <section id="contact">
 
       <div class="overlay"></div>
 
-		<div class="row narrow section-intro with-bottom-sep animate-this">
+		<div class="row narrow section-intro with-bottom-sep-light animate-this">
    		<div class="col-twelve">
    			<h3>Contact</h3>
    			<h1>Get In <span class="highlight">Touch.</span></h1>

@@ -19,9 +19,9 @@
  *  12. services
  *  13. experience
  *  14. certificates
- *  14. portfolio
- *  16. testimonials
- *  17. clients
+ *  15. education
+ *  16. skills
+ *  17. testimonials
  *  18. contact
  *  19. modal
  *  20. footer
@@ -152,6 +152,14 @@
    text-transform: uppercase;
    letter-spacing: .2rem;
  }
+   
+ .highlight {
+    color: #54d2d9;
+ }
+
+ .home-highlight {
+   color: #2f2f2f;
+ }
  
  p img {
    margin: 0;
@@ -177,13 +185,6 @@
    font-weight: normal;
  }
  
- em, i {
-   font-family: "librebaskerville-italic", serif;
- }
- 
- strong, b {
-   font-family: "librebaskerville-bold", serif;
- }
  
  small {
    font-size: 1.1rem;
@@ -723,7 +724,6 @@
    font-size: 1.4rem;
    text-transform: uppercase;
    letter-spacing: .3rem;
-   height: 5.4rem;
    line-height: 5.4rem;
    padding: 0 3rem;
    margin: 0 .3rem 1.2rem 0;
@@ -799,18 +799,21 @@
  }
  
  button.stroke, .button.stroke {
-   background: transparent;
-   border: 3px solid #313131;
+   background: #ffffff1c;
+   color: #fff;
+   border: 1px solid #ffffff80;
+   box-shadow: 0 2px 12px rgba(0,0,0,0.12);
    line-height: 4.8rem;
-   transition: all 0.3s ease;
+   transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
  }
  
- button.stroke:hover, .button.stroke:hover {
-   border: 3px solid #54d2d9;
-   background-color: #54d2d9;
-   color: #000000 !important;
-   border-color: #54d2d9;
+ button.stroke:hover, .button.stroke:hover, button.stroke:focus, .button.stroke:focus {
+  background: #54d2d9;
+  color: #151515;
+  transform: translateY(-3px) scale(1.04);
+  box-shadow: 0 6px 24px rgba(84,210,217,0.18);
  }
+
  
  button.stroke.medium, .button.stroke.medium {
    line-height: 5.1rem !important;
@@ -827,6 +830,61 @@
    border: 0;
    padding: 0;
  }
+
+ /* Download Resume Button */
+.download-resume-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  background: #ffffff1c;
+  color: #fff;
+  border-radius: 2.5rem;
+  padding: 0.9rem 2.2rem 0.9rem 1.7rem;
+  font-family: "montserrat-bold", sans-serif;
+  font-size: 1.5rem;
+  text-decoration: none;
+  position: absolute;
+  right: 8%;
+  top: 28px;
+  z-index: 15;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.12);
+  transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
+}
+
+.download-resume-btn .download-icon {
+  width: 22px;
+  height: 22px;
+  margin-left: 0.5rem;
+  transition: transform 0.3s;
+  filter: brightness(2);
+}
+
+.download-resume-btn:hover,
+.download-resume-btn:focus {
+  background: #54d2d9;
+  color: #151515;
+  transform: translateY(-3px) scale(1.04);
+  box-shadow: 0 6px 24px rgba(84,210,217,0.18);
+}
+
+.download-resume-btn:hover .download-icon,
+.download-resume-btn:focus .download-icon {
+  transform: translateY(-2px) scale(1.15) rotate(-12deg);
+  filter: brightness(1.2) drop-shadow(0 0 2px #fff);
+}
+
+@media only screen and (max-width: 600px) {
+  .download-resume-btn {
+    right: 8%;
+    top: 28px;
+    font-size: 1.2rem;
+    padding: 0.7rem 1.5rem 0.7rem 1.2rem;
+  }
+  .download-resume-btn .download-icon {
+    width: 18px;
+    height: 18px;
+  }
+}
  
  
  /* ===================================================================
@@ -1160,17 +1218,24 @@
    font-size: 1.8;
    line-height: 1.833;
  }
- .section-intro.with-bottom-sep {
+ .section-intro.with-bottom-sep-light, .section-intro.with-bottom-sep-dark {
    padding-bottom: 4.2rem;
    position: relative;
  }
- .section-intro.with-bottom-sep::after {
+ .section-intro.with-bottom-sep-light::after,  .section-intro.with-bottom-sep-dark::after {
    display: inline-block;
    height: 1px;
    width: 200px;
-   background-color: rgba(242, 242, 242, 0.1);
    text-align: center;
  }
+
+ .section-intro.with-bottom-sep-light::after {
+   background-color: rgba(242, 242, 242, 0.192);
+ }
+
+ .section-intro.with-bottom-sep-dark::after {
+    background-color: rgba(0, 0, 0, 0.247);
+  }
  
  /* ------------------------------------------------------------------- 
   * responsive:
@@ -1363,7 +1428,7 @@
   * off-canvas menu - (_layout.scss) 
   * ------------------------------------------------------------------- */
  #menu-nav-wrap {
-   background: #0C0C0C;
+   background: #0c0c0cd4;
    color: rgba(255, 255, 255, 0.25);
    font-size: 1.5rem;
    line-height: 1.6;
@@ -1580,10 +1645,6 @@
  }
  .home-content-tablecell .more {
    margin: 4.8rem 0 0 0;
- }
- .home-content-tablecell .more .button {
-   border-color: #FFFFFF;
-   color: #FFFFFF;
  }
  
  /* home social-list */
@@ -2017,16 +2078,12 @@
  
 
  /* ===================================================================
-  *  13. testimonials - (_layout.scss)
+  *  13. experience - (_layout.scss)
   *
   * ------------------------------------------------------------------- */
   
   h1, h2, h3, h4, h5, h6 {
     font-weight: 900;
-  }
-  
-  .highlight {
-    color: #54d2d9;
   }
 
   .section-title {
@@ -2220,54 +2277,145 @@
   }
   #intro-certificates .section-intro .lead {
     color: rgba(242, 242, 242, 0.4);
-  }  
+  } 
+
 
  /* ===================================================================
-  *  15. portfolio - (_layout.scss)
+  *  13. Education
   *
   * ------------------------------------------------------------------- */
- #portfolio {
+
+#education {
+  background: #fff;
+  min-height: 600px;
+  position: relative;
+  padding: 12rem 0 12rem;
+  color: #151515;
+}
+#education .section-intro h3 {
+  color: rgb(21 21 21 / 68%);
+}
+#education .section-intro h1 {
+  color: #151515;
+}
+#education .section-intro .lead {
+  color: rgb(21 21 21 / 54%);
+}
+.education-item {
+  position: relative; /* Needed for absolute positioning of icons */
+  background: #f5f5f5;
+  border-radius: 1rem;
+  padding: 2.5rem 2rem;
+  margin: 0 auto 2rem auto;
+  max-width: 600px;
+  box-shadow: 0 4px 24px rgb(0 0 0 / 26%);
+  text-align: center;
+}
+
+.education-icon {
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  z-index: 2;
+  opacity: 0.85;
+  pointer-events: none;
+}
+
+.education-icon.top-right {
+  top: 18px;
+  right: 18px;
+}
+
+.education-icon.bottom-left {
+  bottom: 18px;
+  left: 18px;
+}
+
+.degree-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #54d2d9;
+  margin-bottom: 0.5rem;
+}
+.university-name {
+  font-size: 1.6rem;
+  color: #353535;
+  margin-bottom: 0.2rem;
+}
+.education-date {
+  font-size: 1.4rem;
+  color: #888;
+  margin-bottom: 1rem;
+}
+.education-award {
+  margin-bottom: 1rem;
+}
+.award-label {
+  background: #ffe082;
+  color: #8d6d1f;
+  padding: 0.3rem 1rem;
+  border-radius: 1rem;
+  font-weight: bold;
+  font-size: 1.5rem;
+  display: inline-block;
+  box-shadow: 4px 6px 3px 0px rgba(2, 2, 2, 0.24);
+}
+.education-description {
+  color: #555;
+  font-size: 1.3rem;
+}
+
+.degree-title, .university-name, .education-date, .education-award, .award-label, .education-description {
+  position: relative;
+  z-index: 5;
+}
+
+ /* ===================================================================
+  *  16. skills - (_layout.scss)
+  *
+  * ------------------------------------------------------------------- */
+ #skills {
    background: #111111;
    min-height: 800px;
    position: relative;
    padding: 15rem 0 15rem;
  }
- #portfolio .intro-wrap {
+ #skills .intro-wrap {
   overflow: visible; /* Allow tooltips to overflow */
   position: relative; /* Ensure proper positioning context */
   background: #111111;
  }
- #portfolio .section-intro {
+ #skills .section-intro {
   padding-bottom: 0;
   margin-bottom: 0;
 }
- #portfolio .section-intro h3 {
+ #skills .section-intro h3 {
    color: rgba(242, 242, 242, 0.5);
  }
- #portfolio .section-intro h1 {
+ #skills .section-intro h1 {
    color: #FFFFFF;
  }
- #portfolio .section-intro .lead {
+ #skills .section-intro .lead {
    color: rgba(242, 242, 242, 0.4);
  }
- #portfolio .portfolio-content {
+ #skills .skills-content {
    margin-top: -22.2rem;
  }
- #portfolio .bricks-wrapper:before, 
- #portfolio .bricks-wrapper:after {
+ #skills .bricks-wrapper:before, 
+ #skills .bricks-wrapper:after {
    content: "";
    display: table;
  }
- #portfolio .bricks-wrapper:after {
+ #skills .bricks-wrapper:after {
    clear: both;
  }
- #portfolio .bricks-wrapper .brick {
+ #skills .bricks-wrapper .brick {
    float: left;
    width: 50%;
    padding: 0;
    margin: 0;
  }
- #portfolio .bricks-wrapper .brick:nth-child(2n+1) {
+ #skills .bricks-wrapper .brick:nth-child(2n+1) {
    clear: both;
  }
  
@@ -2467,10 +2615,10 @@
  
  /* ------------------------------------------------------------------- 
   * responsive:
-  * portfolio
+  * skills
   * ------------------------------------------------------------------- */
  @media only screen and (max-width: 600px) {
-   #portfolio .bricks-wrapper .brick {
+   #skills .bricks-wrapper .brick {
      float: none;
      width: 100%;
    }
@@ -2483,7 +2631,7 @@
  
  
  /* ===================================================================
-  *  16. testimonials - (_layout.scss)
+  *  17. testimonials - (_layout.scss)
   *
   * ------------------------------------------------------------------- */
  #testimonials {
@@ -2650,80 +2798,6 @@
  }
  
  
- /* ===================================================================
-  *  17. clients - (_layout.scss)
-  *
-  * ------------------------------------------------------------------- */
- #clients {
-   background-color: #e9eaea;
-   padding: 4.8rem 0 4.8rem;
- }
- #clients .client-lists .owl-item {
-   opacity: .6;
-   -moz-transition: all 0.6s ease-in-out;
-   -o-transition: all 0.6s ease-in-out;
-   -webkit-transition: all 0.6s ease-in-out;
-   -ms-transition: all 0.6s ease-in-out;
-   transition: all 0.6s ease-in-out;
- }
- #clients .client-lists .owl-item:hover {
-   opacity: 1;
- }
- #clients .owl-carousel .owl-nav {
-   margin-top: 1.8rem;
-   margin-bottom: 1.5rem;
-   text-align: center;
-   -webkit-tap-highlight-color: transparent;
- }
- #clients .owl-carousel .owl-nav [class*='owl-'] {
-   color: #FFFFFF;
-   font-family: "montserrat-regular", sans-serif;
-   font-size: 1.4rem;
-   height: 3rem;
-   line-height: 3rem;
-   margin: .6rem;
-   padding: 0 10px;
-   background: rgba(0, 0, 0, 0.5);
-   display: inline-block;
-   cursor: pointer;
-   border-radius: 3px;
- }
- #clients .owl-carousel .owl-nav [class*='owl-']:hover {
-   background: rgba(0, 0, 0, 0.7);
-   color: #FFFFFF;
-   text-decoration: none;
- }
- #clients .owl-carousel .owl-nav .disabled {
-   background: rgba(0, 0, 0, 0.2);
-   cursor: default;
- }
- #clients .owl-carousel .owl-nav.disabled + .owl-dots {
-   margin-top: 1.8rem;
- }
- #clients .owl-carousel .owl-dots {
-   text-align: center;
-   -webkit-tap-highlight-color: transparent;
- }
- #clients .owl-carousel .owl-dots .owl-dot {
-   display: inline-block;
-   zoom: 1;
-   display: inline;
- }
- #clients .owl-carousel .owl-dots .owl-dot span {
-   width: 9px;
-   height: 9px;
-   background-color: #959595;
-   margin: 6px 6px;
-   display: block;
-   -webkit-backface-visibility: visible;
-   transition: opacity 200ms ease;
-   border-radius: 50%;
- }
- #clients .owl-carousel .owl-dots .owl-dot.active span,
- #clients .owl-carousel .owl-dots .owl-dot:hover span {
-   background-color: #000000;
- }
- 
  
  /* ===================================================================
   *  18. contact - (_layout.scss)
@@ -2731,7 +2805,7 @@
   * ------------------------------------------------------------------- */
  #contact {
    background-color: #111111;
-   background-image: url(../images/contact-bg.jpg);
+   background-image: url(../images/hero-bg.jpg);
    background-repeat: no-repeat;
    background-position: center;
    -webkit-background-size: cover;
@@ -3224,12 +3298,10 @@
  
  /* Style for the disclaimer section */
  .disclaimer {
-   background-color: #f9f9f9; /* Light background color */
-   padding: 20px; /* Padding around the text */
+   padding: 0px 20px; /* Padding around the text */
    text-align: center; /* Center-align the text */
    font-size: 0.9rem; /* Slightly smaller font size */
    color: #555; /* Gray text color */
-   border-top: 1px solid #e1e1e1; /* Top border to separate from footer */
    margin-top: 20px; /* Space above the disclaimer */
  }
  

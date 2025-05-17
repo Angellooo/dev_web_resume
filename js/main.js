@@ -438,3 +438,22 @@
  
 
 })(jQuery);
+
+// Typed.js initialization
+document.addEventListener('DOMContentLoaded', function() {
+    var typed = new Typed('#typed', {
+        strings: [
+            "Python Development",
+            "Back-End Development",
+            "Django",
+            "Flask",
+            "Extract Transform and Load (ETL)",
+            "Business Projects",
+            "SDLC"
+        ],
+        typeSpeed: 30,
+        backSpeed: 40,
+        backDelay: 1500,
+        loop: true
+    });
+});
