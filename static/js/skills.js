@@ -288,6 +288,8 @@ const skillSummaries = {
   "Leadership and Management": "Leadership and Management involve guiding teams and organizations towards achieving strategic objectives through effective decision-making. In the IT industry, strong leadership is essential for navigating technological advancements and ensuring that projects align with business goals. Effective leaders cultivate a positive organizational culture, drive change, and empower employees to contribute to the company's success .​",
 }
 
+// If you fetch or process user data in the future, sanitize before injecting into DOM.
+
 const ul = document.querySelector('#skills-wallet .ps-list');
 
 // Render into the DOM

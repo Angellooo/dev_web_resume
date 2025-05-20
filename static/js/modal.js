@@ -20,21 +20,26 @@ document.addEventListener("DOMContentLoaded", () => {
             badgeProvider = badge.dataset.badgeProvider;
 
             if (badgeId && badgeProvider) {
-                // Determine the URL based on the provider
-                let redirectUrl = "";
-                let providerName = "";
-                if (badgeProvider === "credly") {
-                    redirectUrl = `https://www.credly.com/badges/${badgeId}`;
-                    providerName = `Credly`;
-                } else if (badgeProvider === "coursera") {
-                    redirectUrl = `https://www.coursera.org/account/accomplishments/verify/${badgeId}`;
-                    providerName = `Coursera`;
-                }
+                // Validate badgeProvider and badgeId to prevent open redirect/XSS
+                const allowedProviders = ["credly", "coursera"];
+                if (allowedProviders.includes(badgeProvider) && /^[a-zA-Z0-9\-]+$/.test(badgeId)) {
+                    // Determine the URL based on the provider
+                    let redirectUrl = "";
+                    let providerName = "";
+                    if (badgeProvider === "credly") {
+                        redirectUrl = `https://www.credly.com/badges/${badgeId}`;
+                        providerName = `Credly`;
+                    } else if (badgeProvider === "coursera") {
+                        redirectUrl = `https://www.coursera.org/account/accomplishments/verify/${badgeId}`;
+                        providerName = `Coursera`;
+                    }
 
-                badgeLink.textContent = redirectUrl;
-                badgeProviderModal.textContent = providerName;
-                modal.classList.add("show");
-                modalContent.classList.add("show");
+                    badgeLink.textContent = redirectUrl;
+                    badgeProviderModal.textContent = providerName;
+                    modal.classList.add("show");
+                    modalContent.classList.add("show");
+                }
+                // else: ignore or show error
             }
         });
     });
