@@ -3,7 +3,7 @@ const certificates = [
   {
     name: "IBM Back-End Development Professional Certificate",
     verifiedBy: "Credly",
-    badgeImage: "./images/certificates/IBM_Back_End_Development_Professional_Certificate.png",
+    badgeImage: staticBase + "images/certificates/IBM_Back_End_Development_Professional_Certificate.png",
     skills: [
       "Agile and Scrum", "Application Development", "Artificial Intelligence", "Back-End Applications", 
       "Shell Scripting", "Cloning and Forking", "Cloud Applications", "Cloud Native", "Containers", 
@@ -20,7 +20,7 @@ const certificates = [
   {
     name: "IBM Applied Software Engineering Fundamentals Specialization",
     verifiedBy: "Credly",
-    badgeImage: "./images/certificates/IBM_applied_software_engineering_fundamentals.png",
+    badgeImage: staticBase + "images/certificates/IBM_applied_software_engineering_fundamentals.png",
     skills: [
       "Application Architecture and Design", "Data Structures", "Distributed Version Control Systems", 
       "Git", "Linux", "Python", "Shell Scripting", "Software Development Lifecycle", 
@@ -30,19 +30,19 @@ const certificates = [
   {
     name: "IBM Python Project for AI and Application Development",
     verifiedBy: "Credly",
-    badgeImage: "./images/certificates/IBM_python_project_for_ai_and_application_development.png",
+    badgeImage: staticBase + "images/certificates/IBM_python_project_for_ai_and_application_development.png",
     skills: ["Artificial Intelligence", "Data Science", "Python", "Web Application", "Flask", "Application Development"]
   },
   {
     name: "IBM Python for Data Science and AI",
     verifiedBy: "Credly",
-    badgeImage: "./images/certificates/IBM_python_for_data_science_and_ai.png",
+    badgeImage: staticBase + "images/certificates/IBM_python_for_data_science_and_ai.png",
     skills: ["Bokeh", "Matplotlib", "Python", "Pandas", "Data Analysis", "Data Science", "Numpy"]
   },
   {
     name: "IBM Application Development using Microservices and Serverless",
     verifiedBy: "Credly",
-    badgeImage: "./images/certificates/IBM_application_development_using_microservices_and_serverless.png",
+    badgeImage: staticBase + "images/certificates/IBM_application_development_using_microservices_and_serverless.png",
     skills: [
       "Containers", "cURL", "Docker", "Flask", "GraphQL", "Microservices", "Postman", 
       "Representational State Transfer (REST)", "Serverless", "Swagger", "Cloud Applications", "OpenShift"
@@ -51,13 +51,13 @@ const certificates = [
   {
     name: "IBM Back-end Application Development Capstone Project",
     verifiedBy: "Credly",
-    badgeImage: "./images/certificates/IBM_back_end_application_development_capstone_project.png",
+    badgeImage: staticBase + "images/certificates/IBM_back_end_application_development_capstone_project.png",
     skills: ["Back-End Development", "Django", "Docker", "MongoDB", "Flask", "Representational State Transfer (REST)"]
   },
   {
     name: "IBM Developing Applications with SQL, Databases, and Django",
     verifiedBy: "Credly",
-    badgeImage: "./images/certificates/IBM_developing_applications_with_sql_databases_and_django.png",
+    badgeImage: staticBase + "images/certificates/IBM_developing_applications_with_sql_databases_and_django.png",
     skills: [
       "Cloud Database Fundamentals", "CSS", "Django", "GitHub", "HTML", 
       "Object-Oriented Programming", "Object-Relational Mapping", "Python", "SQL", "Back-End Applications", "Relational Database"
@@ -66,13 +66,13 @@ const certificates = [
   {
     name: "IBM Monitoring and Observability for Development and DevOps",
     verifiedBy: "Credly",
-    badgeImage: "./images/certificates/IBM_monitoring_and_observability_for_development_and_devops.png",
+    badgeImage: staticBase + "images/certificates/IBM_monitoring_and_observability_for_development_and_devops.png",
     skills: ["Logging", "Monitoring", "Observability", "Telemetry", "Tracing", "DevOps"]
   },
   {
     name: "IBM Container & Kubernetes Essentials V2",
     verifiedBy: "Credly",
-    badgeImage: "./images/certificates/IBM_container_and_kubernetes_essentials_V2.png",
+    badgeImage: staticBase + "images/certificates/IBM_container_and_kubernetes_essentials_V2.png",
     skills: [
       "Auto-scaling", "Cloud", "Containers", "Istio", "Kubernetes", "OpenShift", 
       "ReplicaSets", "YAML", "Cloud Native", "Docker"
@@ -81,7 +81,7 @@ const certificates = [
   {
     name: "IBM Linux Commands & Shell Scripting Essentials",
     verifiedBy: "Credly",
-    badgeImage: "./images/certificates/IBM_linux_commands_and_shell_scripting_essentials.png",
+    badgeImage: staticBase + "images/certificates/IBM_linux_commands_and_shell_scripting_essentials.png",
     skills: [
       "Shell Scripting", "Cron Jobs", "Crontab", "Linux", "Shebang", "UNIX Shell Commands", "Extract Transform and Load (ETL)", "Linux Commands"
     ]
@@ -89,7 +89,7 @@ const certificates = [
   {
     name: "IBM Git and GitHub Essentials",
     verifiedBy: "Credly",
-    badgeImage: "./images/certificates/IBM_git_and_github_essentials.png",
+    badgeImage: staticBase + "images/certificates/IBM_git_and_github_essentials.png",
     skills: [
       "Code Repositories", "Collaboration", "Distributed Version Control Systems", "Git", "GitHub", 
       "GitLab", "Merge", "Open Source", "Pull Request", "Social Coding", "Software Development", "Cloning and forking"
@@ -98,7 +98,7 @@ const certificates = [
   {
     name: "IBM Software Engineering Essentials",
     verifiedBy: "Credly",
-    badgeImage: "./images/certificates/IBM_software_engineering_essentials.png",
+    badgeImage: staticBase + "images/certificates/IBM_software_engineering_essentials.png",
     skills: [
       "Software Architecture", "Software Development Lifecycle", 
       "Software Development Tools", "Software Engineering", "Computer Programming", "Programming Principles", "Agile and Scrum", "Communication", "Python"
@@ -107,7 +107,7 @@ const certificates = [
   {
     name: "IBM Application Security for Developers and DevOps Professionals",
     verifiedBy: "Coursera",
-    badgeImage: "./images/certificates/IBM_application_security_for_developers_and_devops_professionals.png",
+    badgeImage: staticBase + "images/certificates/IBM_application_security_for_developers_and_devops_professionals.png",
     skills: [
       "Security", "Security Engineering", "DevOps", "Programming Principles", "Logging", 
       "Monitoring", "Open Web Application Security Project (OWASP)", "Observability"
@@ -300,7 +300,7 @@ skills.forEach(skill => {
     ${skill.badgeSupported
       ? `<div class="verified-skill" data-skill="${skill.name}" data-badge-provider="credly">
           <span class="tooltip">
-            <div class="tooltip-title">CERTIFIED <img src="images/icons/certified_skill.svg" alt="Certified Skill" class="certified-skill-icon"></div>
+            <div class="tooltip-title">CERTIFIED <img src="${staticBase}images/icons/certified_skill.svg" alt="Certified Skill" class="certified-skill-icon"></div>
             <div class="tooltip-certificates"></div>
             <div class="tooltip-summary"></div>
           </span>
@@ -363,7 +363,7 @@ document.querySelectorAll('.verified-skill').forEach(icon => {
         <div>
           <div class="certificate-name">${cert.name}</div>
           <div class="verified-by-${cert.verifiedBy.toLowerCase()}">
-            <img src="images/icons/verify_badge_${cert.verifiedBy.toLowerCase()}.svg" alt="Verified by ${cert.verifiedBy}" class="${cert.verifiedBy.toLowerCase()}-icon">
+            <img src="${staticBase}images/icons/verify_badge_${cert.verifiedBy.toLowerCase()}.svg" alt="Verified by ${cert.verifiedBy}" class="${cert.verifiedBy.toLowerCase()}-icon">
             Verified by ${cert.verifiedBy}
           </div>
         </div>

@@ -17,28 +17,28 @@
 
  	<!-- CSS
    ================================================== -->
-   <link rel="stylesheet" href="css/base.css">
-   <link rel="stylesheet" href="css/vendor.css">
+   <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
+   <link rel="stylesheet" href="{{ url_for('static', filename='css/vendor.css') }}">
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css" crossorigin="">
    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
-   <link rel="stylesheet" href="css/main.css">
-   <link rel="stylesheet" href="css/skills.css">
+   <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+   <link rel="stylesheet" href="{{ url_for('static', filename='css/skills.css') }}">
    
    <!-- script
    ================================================== -->
-	<script src="js/modernizr.js"></script>
-	<script src="js/pace.min.js"></script>
+	<script src="{{ url_for('static', filename='js/modernizr.js') }}"></script>
+	<script src="{{ url_for('static', filename='js/pace.min.js') }}"></script>
 	<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 	
 	<!--=============== SWIPER CSS ===============-->
 	
-	<link rel="stylesheet" href="css/swiper-bundle.min.css">
-	<link rel="stylesheet" href="css/swiper.css">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/swiper-bundle.min.css') }}">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/swiper.css') }}">
 	
    <!-- favicons
 	================================================== -->
-	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-	<link rel="icon" href="favicon.ico" type="image/x-icon">
+	<link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.ico') }}" type="image/x-icon">
+	<link rel="icon" href="{{ url_for('static', filename='images/favicon.ico') }}" type="image/x-icon">
 
 </head>
 
@@ -51,13 +51,13 @@
 
 
    	<div class="header-logo">
-	      <a href="index.html">Angello Gonzalez</a>
+	      <a href="/">Angello Gonzalez</a>
 	   </div> 
 
 	   	<!-- Download Resume Button -->
     <a href="resume.pdf" class="download-resume-btn" target="_blank" title="Download Resume">
         <span>Download Resume</span>
-        <img src="images/icons/download_icon.svg" alt="Download Icon" class="download-icon">
+        <img src="{{ url_for('static', filename='images/icons/download_icon.svg') }}" alt="Download Icon" class="download-icon">
     </a>
 
 		<a id="header-menu-trigger" href="#0">
@@ -315,7 +315,7 @@
             <div class="swiper-wrapper">
                 <article class="card__article swiper-slide" data-provider="IBM" title="IBM Back-End Development Professional Certificate">
 					<div class="card__image">
-						<img src="./images/certificates/IBM_Back_End_Development_Professional_Certificate.png" alt="IBM Back-End Development Professional Certificate" class="card__img">
+						<img src="{{ url_for('static', filename='images/certificates/IBM_Back_End_Development_Professional_Certificate.png') }}" alt="IBM Back-End Development Professional Certificate" class="card__img">
 						<div class="card__shadow"></div>
 					
 						<!-- Badge Container -->
@@ -350,7 +350,7 @@
     
 				<article class="card__article swiper-slide" data-provider="UPenn" title="University of Pennsylvania English for Career Development Certificate">
 					<div class="card__image">
-						<img src="./images/certificates/UPenn_english-for-career-development-certificate.png" alt="University of Pennsylvania English for Career Development Certificate" class="card__img">
+						<img src="{{ url_for('static', filename='images/certificates/UPenn_english-for-career-development-certificate.png') }}" alt="University of Pennsylvania English for Career Development Certificate" class="card__img">
 						<div class="card__shadow"></div>
 					
 						<!-- Badge Container -->
@@ -374,7 +374,7 @@
     
                 <article class="card__article swiper-slide" data-provider="IBM">
                   <div class="card__image">
-                      <img src="./images/certificates/IBM_applied_software_engineering_fundamentals.png" alt="IBM Applied Software Engineering Fundamentals Specialization" class="card__img">
+                      <img src="{{ url_for('static', filename='images/certificates/IBM_applied_software_engineering_fundamentals.png') }}" alt="IBM Applied Software Engineering Fundamentals Specialization" class="card__img">
                       <div class="card__shadow"></div>
 					  <div class="badge-container">
 						<!-- Professional Certificate -->
@@ -407,7 +407,7 @@
     
                 <article class="card__article swiper-slide" data-provider="IBM" title="IBM Python Project for AI and Application Development Certificate">
 					<div class="card__image">
-						<img src="./images/certificates/IBM_python_project_for_ai_and_application_development.png" alt="IBM Python Project for AI and Application Development Certificate" class="card__img">
+						<img src="{{ url_for('static', filename='images/certificates/IBM_python_project_for_ai_and_application_development.png') }}" alt="IBM Python Project for AI and Application Development Certificate" class="card__img">
 						<div class="card__shadow"></div>
 					
 						<!-- Badge Container -->
@@ -438,7 +438,7 @@
 
                 <article class="card__article swiper-slide" data-provider="IBM" title="IBM Python for Data Science and AI Certificate">
 					<div class="card__image">
-						<img src="./images/certificates/IBM_python_for_data_science_and_ai.png" alt="IBM Python for Data Science and AI Certificate" class="card__img">
+						<img src="{{ url_for('static', filename='images/certificates/IBM_python_for_data_science_and_ai.png') }}" alt="IBM Python for Data Science and AI Certificate" class="card__img">
 						<div class="card__shadow"></div>
 					
 						<!-- Badge Container -->
@@ -469,7 +469,7 @@
 
                 <article class="card__article swiper-slide" data-provider="IBM" title="IBM Application Development using Microservices and Serverless Certificate">
 					<div class="card__image">
-						<img src="./images/certificates/IBM_application_development_using_microservices_and_serverless.png" alt="IBM Application Development using Microservices and Serverless Certificate" class="card__img">
+						<img src="{{ url_for('static', filename='images/certificates/IBM_application_development_using_microservices_and_serverless.png') }}" alt="IBM Application Development using Microservices and Serverless Certificate" class="card__img">
 						<div class="card__shadow"></div>
 					
 						<!-- Badge Container -->
@@ -500,7 +500,7 @@
 
                 <article class="card__article swiper-slide" data-provider="IBM" title="IBM Back-end Application Development Capstone Project">
 					<div class="card__image">
-						<img src="./images/certificates/IBM_back_end_application_development_capstone_project.png" alt="IBM Back-end Application Development Capstone Project" class="card__img">
+						<img src="{{ url_for('static', filename='images/certificates/IBM_back_end_application_development_capstone_project.png') }}" alt="IBM Back-end Application Development Capstone Project" class="card__img">
 						<div class="card__shadow"></div>
 					
 						<!-- Badge Container -->
@@ -531,7 +531,7 @@
 
                 <article class="card__article swiper-slide" data-provider="IBM" title="IBM Developing Applications with SQL, Databases, and Django Certificate">
 					<div class="card__image">
-						<img src="./images/certificates/IBM_developing_applications_with_sql_databases_and_django.png" alt="IBM Developing Applications with SQL, Databases, and Django Certificate" class="card__img">
+						<img src="{{ url_for('static', filename='images/certificates/IBM_developing_applications_with_sql_databases_and_django.png') }}" alt="IBM Developing Applications with SQL, Databases, and Django Certificate" class="card__img">
 						<div class="card__shadow"></div>
 					
 						<!-- Badge Container -->
@@ -562,7 +562,7 @@
 
                 <article class="card__article swiper-slide" data-provider="IBM" title="IBM Monitoring and Observability for Development and DevOps Certificate">
 					<div class="card__image">
-						<img src="./images/certificates/IBM_monitoring_and_observability_for_development_and_devops.png" alt="IBM Monitoring and Observability for Development and DevOps Certificate" class="card__img">
+						<img src="{{ url_for('static', filename='images/certificates/IBM_monitoring_and_observability_for_development_and_devops.png') }}" alt="IBM Monitoring and Observability for Development and DevOps Certificate" class="card__img">
 						<div class="card__shadow"></div>
 					
 						<!-- Badge Container -->
@@ -593,7 +593,7 @@
 
 				<article class="card__article swiper-slide" data-provider="IBM" title="IBM Application Security for Developers and DevOps Certificate">
 					<div class="card__image">
-						<img src="./images/certificates/IBM_application_security_for_developers_and_devops_professionals.png" alt="IBM Application Security for Developers and DevOps Certificate" class="card__img">
+						<img src="{{ url_for('static', filename='images/certificates/IBM_application_security_for_developers_and_devops_professionals.png') }}" alt="IBM Application Security for Developers and DevOps Certificate" class="card__img">
 						<div class="card__shadow"></div>
 					
 						<!-- Badge Container -->
@@ -618,7 +618,7 @@
 
                 <article class="card__article swiper-slide" data-provider="IBM" title="IBM Container & Kubernetes Essentials V2 Certificate">
 					<div class="card__image">
-						<img src="./images/certificates/IBM_container_and_kubernetes_essentials_V2.png" alt="IBM Container & Kubernetes Essentials V2 Certificate" class="card__img">
+						<img src="{{ url_for('static', filename='images/certificates/IBM_container_and_kubernetes_essentials_V2.png') }}" alt="IBM Container & Kubernetes Essentials V2 Certificate" class="card__img">
 						<div class="card__shadow"></div>
 					
 						<!-- Badge Container -->
@@ -649,7 +649,7 @@
 
                 <article class="card__article swiper-slide" data-provider="IBM" title="IBM Linux Commands & Shell Scripting Essentials Certificate">
 					<div class="card__image">
-						<img src="./images/certificates/IBM_linux_commands_and_shell_scripting_essentials.png" alt="IBM Linux Commands & Shell Scripting Essentials Certificate" class="card__img">
+						<img src="{{ url_for('static', filename='images/certificates/IBM_linux_commands_and_shell_scripting_essentials.png') }}" alt="IBM Linux Commands & Shell Scripting Essentials Certificate" class="card__img">
 						<div class="card__shadow"></div>
 					
 						<!-- Badge Container -->
@@ -680,7 +680,7 @@
 
 				<article class="card__article swiper-slide" data-provider="IBM" title="IBM Git and GitHub Essentials Certificate">
 					<div class="card__image">
-						<img src="./images/certificates/IBM_git_and_github_essentials.png" alt="IBM Git and GitHub Essentials Certificate" class="card__img">
+						<img src="{{ url_for('static', filename='images/certificates/IBM_git_and_github_essentials.png') }}" alt="IBM Git and GitHub Essentials Certificate" class="card__img">
 						<div class="card__shadow"></div>
 					
 						<!-- Badge Container -->
@@ -711,7 +711,7 @@
 
 				<article class="card__article swiper-slide" data-provider="IBM" title="IBM Software Engineering Essentials Certificate">
 					<div class="card__image">
-						<img src="./images/certificates/IBM_software_engineering_essentials.png" alt="IBM Software Engineering Essentials Certificate" class="card__img">
+						<img src="{{ url_for('static', filename='images/certificates/IBM_software_engineering_essentials.png') }}" alt="IBM Software Engineering Essentials Certificate" class="card__img">
 						<div class="card__shadow"></div>
 					
 						<!-- Badge Container -->
@@ -778,7 +778,7 @@
 		<div class="col-twelve animate-this">
 		<div class="education-item">
 			<!-- Top-right icon -->
-    		<img src="images/icons/graduate_icon.svg" alt="Graduate Icon" class="education-icon top-right">
+    		<img src="{{ url_for('static', filename='images/icons/graduate_icon.svg') }}" alt="Graduate Icon" class="education-icon top-right">
 
 			<h4 class="degree-title">Associate's degree in Computer Science</h4>
 			<p class="university-name">Antonio José de Sucre University Institute of Technology</p>
@@ -791,7 +791,7 @@
 			</p>
 
 			<!-- Bottom-left icon -->
-    		<img src="images/icons/graduate_certification.svg" alt="Certification Icon" class="education-icon bottom-left">
+    		<img src="{{ url_for('static', filename='images/icons/graduate_certification.svg') }}" alt="Certification Icon" class="education-icon bottom-left">
 		</div>
 		</div>
 	</div>
@@ -843,7 +843,7 @@
                   </p> 
 
                   <div class="testimonial-author">
-                    	<img src="images/clients/lewin_xue_photo.jpg" alt="Author image">
+                    	<img src="{{ url_for('static', filename='images/clients/lewin_xue_photo.jpg') }}" alt="Author image">
                     	<div class="author-info">
                     		Lewin Xue
                     		<span class="position">Vicepresident, <a href="https://www.charlesbank.com/">Charlesbank Capital Partners.</a></span>
@@ -1034,14 +1034,37 @@
 
    <!-- Java Script
    ================================================== --> 
-	<script src="js/jquery-2.1.3.min.js"></script>
-	<script src="js/plugins.js"></script>
-	<script src="js/main.js"></script>
+
+   	<!-- Set up providerData variable for swiper.js and flask static paths - Certifications Section -->
+	<script>
+		const providerData = {
+			IBM: {
+				description: "IBM is an American multinational technology company headquartered in Armonk, New York and present in over 175 countries. Is the largest industrial research organization in the world, providing certifications that validate expertise in cutting-edge technologies.",
+				logo: "{{ url_for('static', filename='images/brands/ibm_logo_white.svg') }}",
+				background: "{{ url_for('static', filename='images/brands/ibm_background.jpeg') }}"
+				},
+			UPenn: {
+				description: "The University of Pennsylvania is a private Ivy League research university in Philadelphia. It is one of the oldest universities in the United States and is known for its prestigious programs in business, law, and medicine. UPenn also offers cutting-edge certifications that empower professionals to excel in their careers.",
+				logo: "{{ url_for('static', filename='images/brands/upenn_logo_white.png') }}",
+				background: "{{ url_for('static', filename='images/brands/upenn_background.jpg') }}"
+				}
+			};
+	</script>
 	
-   	<script src="js/swiper-bundle.min.js"></script>
-	<script src="js/swiper.js"></script>
-	<script src="js/modal.js"></script>
-	<script src="js/skills.js"></script>
+   <!-- Set up staticBase variable for skills.js and flask static paths - Skills Section -->
+	<script>
+  		var staticBase = "{{ url_for('static', filename='') }}";
+	</script>
+
+
+	<script src="{{ url_for('static', filename='js/jquery-2.1.3.min.js') }}"></script>
+	<script src="{{ url_for('static', filename='js/plugins.js') }}"></script>
+	<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+	
+   	<script src="{{ url_for('static', filename='js/swiper-bundle.min.js') }}"></script>
+	<script src="{{ url_for('static', filename='js/swiper.js') }}"></script>
+	<script src="{{ url_for('static', filename='js/modal.js') }}"></script>
+	<script src="{{ url_for('static', filename='js/skills.js') }}"></script>
 
 
 </body>

@@ -563,7 +563,6 @@
    padding: 1.5rem 2rem;
    border: 0;
    outline: none;
-   vertical-align: middle;
    color: #444444;
    font-family: "montserrat-regular", sans-serif;
    font-size: 1.4rem;
@@ -1443,6 +1442,7 @@
    z-index: 800;
    -webkit-transform: translateZ(0);
    -webkit-backface-visibility: hidden;
+   backface-visibility: hidden;
    -webkit-transform: translateX(100%);
    -ms-transform: translateX(100%);
    transform: translateX(100%);
@@ -2690,7 +2690,6 @@
    margin: 0 auto 1.2rem auto;
    display: block;
    border-radius: 50%;
-   vertical-align: middle;
  }
  #testimonial-slider .testimonial-author .author-info {
    display: inline-block;
