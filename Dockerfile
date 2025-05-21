@@ -7,15 +7,21 @@ RUN apt-get update && apt-get upgrade -y && apt-get install -y --no-install-reco
 
 WORKDIR /app
 
+# Copy and install Python dependencies
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
+# Copy application code
 COPY . .
 
 # Create a non-root user and switch to it
 RUN useradd -m appuser
 USER appuser
 
-ENV FLASK_APP=app.py
+# Expose port 80 for HTTP traffic
+EXPOSE 80
 
-CMD ["flask", "run", "--host=0.0.0.0"]
+# Use Gunicorn as the production WSGI server.
+# This assumes your Flask app is defined in "app.py"
+# with the app instance named "app" (i.e. app = Flask(__name__))
+CMD ["gunicorn", "-b", "0.0.0.0:80", "app:app"]
