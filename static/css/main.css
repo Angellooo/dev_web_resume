@@ -73,6 +73,7 @@
    color: #353535;
    margin: 0;
    padding: 0;
+   overflow-x: hidden;
  }
  
  /* ------------------------------------------------------------------- 
@@ -3115,7 +3116,7 @@
 .modal-content {
   position: relative;
   font-family: "montserrat-bold", sans-serif;
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   background-color: rgba(27, 27, 27, 0.908); /* Bright background for better readability */
   color: rgb(235, 235, 235); /* Darker text for better contrast */
   padding: 30px; /* Increased padding for a cleaner look */
