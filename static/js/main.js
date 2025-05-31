@@ -83,6 +83,7 @@
   		$WIN.on('load', function() {
 
 		   $('#testimonial-slider').flexslider({
+			animationLoop: false,
 		   	namespace: "flex-",
 		      controlsContainer: "",
 		      animation: 'slide',
