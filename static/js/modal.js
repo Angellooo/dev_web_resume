@@ -9,6 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     let badgeId = "";
     let badgeProvider = "";
+    let badgeCertificateType = "";
 
     // Add click event to all badges
     badges.forEach((badge) => {
@@ -18,6 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
             // Check if the badge has a provider and ID
             badgeId = badge.dataset.badgeId;
             badgeProvider = badge.dataset.badgeProvider;
+            badgeCertificateType = badge.dataset.badgeCertificateType;
 
             if (badgeId && badgeProvider) {
                 // Validate badgeProvider and badgeId to prevent open redirect/XSS
@@ -26,11 +28,24 @@ document.addEventListener("DOMContentLoaded", () => {
                     // Determine the URL based on the provider
                     let redirectUrl = "";
                     let providerName = "";
+                    let urlPrefix = "";
+                    console.log(badge.dataset);
+                    
                     if (badgeProvider === "credly") {
                         redirectUrl = `https://www.credly.com/badges/${badgeId}`;
                         providerName = `Credly`;
                     } else if (badgeProvider === "coursera") {
-                        redirectUrl = `https://www.coursera.org/account/accomplishments/verify/${badgeId}`;
+                        if (badgeCertificateType && badgeCertificateType === "professional"){
+                            urlPrefix = "verify/professional-cert";
+                        }
+                        else if (badgeCertificateType && badgeCertificateType === "specialization"){
+                            urlPrefix = "verify/specialization";
+                        }
+                        else if (!badgeCertificateType || badgeCertificateType === "course"){
+                            badgeCertificateType = "course";
+                            urlPrefix = "verify";
+                        }
+                        redirectUrl = `https://www.coursera.org/${urlPrefix}/${badgeId}`;
                         providerName = `Coursera`;
                     }
 
@@ -46,9 +61,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Handle ACCEPT button
     acceptButton.addEventListener("click", () => {
-        window.location.href = badgeLink.textContent;
+        fetch(`/verify-badge?provider=${encodeURIComponent(badgeProvider)}&id=${encodeURIComponent(badgeId)}&certificateType=${encodeURIComponent(badgeCertificateType)}`)
+            .then(response => response.json())
+            .then(data => {
+                if (data.url) {
+                    window.open(data.url, '_blank');
+                } else {
+                    alert("Verification URL not found.");
+                }
+            })
+            .catch(() => alert("Error verifying badge."));
     });
-
     // Handle CANCEL button
     cancelButton.addEventListener("click", () => {
         modal.classList.remove("show");

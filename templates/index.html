@@ -48,14 +48,8 @@
    ================================================== -->
    <header> 
 
-
-
-   	<div class="header-logo">
-	      <a href="/">Angello Gonzalez</a>
-	   </div> 
-
 	   	<!-- Download Resume Button -->
-    <a href="resume.pdf" class="download-resume-btn" target="_blank" title="Download Resume">
+    <a href="{{ url_for('resume') }}" class="download-resume-btn" target="_blank" rel="noreferrer" title="Download Resume">
         <span>Download Resume</span>
         <img src="{{ url_for('static', filename='images/icons/download_icon.svg') }}" alt="Download Icon" class="download-icon">
     </a>
@@ -81,7 +75,7 @@
 				<li><a class="smoothscroll" href="#skills" title="Skills">Skills</a></li>
 				<li><a class="smoothscroll" href="#testimonials" title="Testimonials">Testimonials</a></li>
 				<li><a class="smoothscroll" href="#contact" title="Contact">Contact</a></li>
-				<li><a class="smoothscroll" href="" target="_blank" rel="noreferrer noopener" title="Resume">Download Resume</a></li>							
+				<li><a href="{{ url_for('resume') }}" target="_blank" rel="noreferrer" title="Resume">Download Resume</a></li>							
 			</ul>	
 
 			<ul class="header-social-list">
@@ -333,7 +327,8 @@
 							<!-- Verified by Coursera -->
 							<div class="verified-badge" 
 								data-badge-id="WG0EBLG9UOUX" 
-								data-badge-provider="coursera" 
+								data-badge-provider="coursera"
+								data-badge-certificate-type="professional"
 								title="Verified by Coursera"></div>
 						</div>
 					</div>
@@ -391,6 +386,7 @@
 						<div class="verified-badge" 
 							data-badge-id="QS9GUJLEDXQF" 
 							data-badge-provider="coursera" 
+							data-badge-certificate-type="specialization"
 							title="Verified by Coursera"></div>
 					</div>
                   </div>
@@ -427,7 +423,7 @@
 					</div>
     
                   <div class="card__data">
-                      <h3 class="card__name">Python Project for AI and Application Development</h3>
+                      <h3 class="card__name">IBM Python Project for AI and Application Development</h3>
                       <p class="card__description">
                         Certifies proficiency in developing AI apps with Python and Flask. The badge earner follows the app lifecycle—creating modules, , packaging per PEP8—and deploys AI solutions using IBM Watson libraries.
                       </p>
@@ -489,7 +485,7 @@
 					</div>
     
                   <div class="card__data">
-                      <h3 class="card__name">Application Development using Microservices and Serverless</h3>
+                      <h3 class="card__name">IBM Application Development using Microservices and Serverless</h3>
                       <p class="card__description">
                         Certifies proficiency in designing microservices and serverless apps. The badge earner demonstrates creating REST APIs, testing with cURL/Postman, and deploying containerized applications using Docker and IBM Code Engine.
                       </p>
@@ -551,7 +547,7 @@
 					</div>
     
                   <div class="card__data">
-                      <h3 class="card__name">Developing Applications with SQL, Databases, and Django</h3>
+                      <h3 class="card__name">IBM Developing Applications with SQL, Databases, and Django</h3>
                       <p class="card__description">
 						Certifies foundational skills in SQL, relational databases, and Django. The badge earner designs ER models, writes SQL queries, and leverages Django ORM with Bootstrap to build interactive web applications.
                       </p>
@@ -582,7 +578,7 @@
 					</div>
     
                   <div class="card__data">
-                      <h3 class="card__name">Monitoring and Observability for Development and DevOps</h3>
+                      <h3 class="card__name">IBM Monitoring and Observability for Development and DevOps</h3>
                       <p class="card__description">
 						Certifies mastery in monitoring and observability practices. The badge earner demonstrates expertise in Golden Signals, logging, telemetry with OpenTelemetry, Prometheus, Grafana, Mezmo (LogDNA), and Instana for robust DevOps insights.
                       </p>
@@ -607,7 +603,7 @@
 					</div>
     
                   <div class="card__data">
-                      <h3 class="card__name">Application Security for Developers and DevOps Professionals</h3>
+                      <h3 class="card__name">IBM Application Security for Developers and DevOps Professionals</h3>
                       <p class="card__description">
 						This credential earner has demonstrated proficiency in security concepts to the stages of the software development lifecycle. Certifies proficiency in security by design and how coding practices and other mitigation strategies reduce risk. The earner can write defensive code that follows Open Web Application Security Project (OWASP).
                       </p>
@@ -638,7 +634,7 @@
 					</div>
     
                   <div class="card__data">
-                      <h3 class="card__name">Container & Kubernetes Essentials V2</h3>
+                      <h3 class="card__name">IBM Container & Kubernetes Essentials V2</h3>
                       <p class="card__description">
 						Certifies proficiency in containerization and Kubernetes lifecycle management. The badge earner can build and run container images, author YAML deployments, manage ReplicaSets, and leverage OpenShift and Istio for cloud-native applications.
                       </p>
@@ -669,7 +665,7 @@
 					</div>
     
                   <div class="card__data">
-                      <h3 class="card__name">Linux Commands & Shell Scripting Essentials</h3>
+                      <h3 class="card__name">IBM Linux Commands & Shell Scripting Essentials</h3>
                       <p class="card__description">
 						Certifies proficiency in Linux fundamentals. The badge earner demonstrates hands-on expertise in executing common shell commands, crafting Bash scripts with pipes, filters, and variables, and scheduling cron jobs using crontab.
                       </p>
@@ -700,7 +696,7 @@
 					</div>
     
                   <div class="card__data">
-                      <h3 class="card__name">Git and GitHub Essentials</h3>
+                      <h3 class="card__name">IBM Git and GitHub Essentials</h3>
                       <p class="card__description">
 						Certifies foundational skills in version control and collaborative coding. The badge earner can create and manage GitHub repositories, work with branches, perform pull requests and merges.
                       </p>
@@ -718,7 +714,7 @@
 						<div class="badge-container">
 							<!-- With Honors -->
 							<div class="with-honors-badge" 
-								title="With Honors"></div>
+								title="Certificate issued with Honors"></div>
 
 							<!-- Verified by Credly -->
 							<div class="verified-badge" 
@@ -735,7 +731,7 @@
 					</div>
     
                   <div class="card__data">
-                      <h3 class="card__name">Software Engineering Essentials</h3>
+                      <h3 class="card__name">IBM Software Engineering Essentials</h3>
                       <p class="card__description">
 						Certifies foundational understanding of software engineering and the SDLC. The badge earner can identify key tools, architectures, and programming constructs, and is familiar with career paths in software development.
                       </p>
@@ -977,7 +973,8 @@
 
 	      		<ul class="list-links">
 	      			<li><a href="https://linkedin.com/in/yourprofile">LinkedIn</a></li>
-					<li><a href="https://github.com/yourprofile">GitHub</a></li>				
+					<li><a href="https://github.com/yourprofile">GitHub</a></li>
+					<li><a href="{{ url_for('resume') }}" target="_blank" rel="noreferrer">Download Resume</a></li>
 					</ul>
 
 	      	</div> <!-- end footer-social -->  	    

@@ -833,6 +833,9 @@
 
  /* Download Resume Button */
 .download-resume-btn {
+  position: absolute;
+  left: 32px;
+  top: 30px;
   display: flex;
   align-items: center;
   gap: 0.8rem;
@@ -843,9 +846,6 @@
   font-family: "montserrat-bold", sans-serif;
   font-size: 1.5rem;
   text-decoration: none;
-  position: absolute;
-  right: 8%;
-  top: 28px;
   z-index: 15;
   box-shadow: 0 2px 12px rgba(0,0,0,0.12);
   transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
@@ -875,8 +875,6 @@
 
 @media only screen and (max-width: 600px) {
   .download-resume-btn {
-    right: 8%;
-    top: 28px;
     font-size: 1.2rem;
     padding: 0.7rem 1.5rem 0.7rem 1.2rem;
   }
