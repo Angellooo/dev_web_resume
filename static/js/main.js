@@ -453,8 +453,8 @@ document.addEventListener('DOMContentLoaded', function() {
             "SDLC"
         ],
         typeSpeed: 30,
-        backSpeed: 40,
-        backDelay: 1500,
+        backSpeed: 30,
+        backDelay: 3000,
         loop: true
     });
 });
