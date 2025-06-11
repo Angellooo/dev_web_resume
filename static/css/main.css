@@ -2851,151 +2851,69 @@
  .contact-info .cinfo {
    margin-bottom: 4.2rem;
  }
- 
- /* contact form */
- #contact form {
-   margin-top: 0;
-   margin-bottom: 3rem;
- }
- #contact form .form-field {
-   position: relative;
- }
- #contact form .form-field:before, #contact form .form-field:after {
-   content: "";
-   display: table;
- }
- #contact form .form-field:after {
-   clear: both;
- }
- #contact form .form-field label {
-   font-family: "montserrat-bold", sans-serif;
-   font-size: 1rem;
-   line-height: 1.4;
-   position: absolute;
-   bottom: 1.5rem;
-   right: 0;
-   text-transform: uppercase;
-   letter-spacing: .05rem;
-   padding: .6rem 2rem .6rem 2rem;
-   margin: 0;
-   color: #000000;
-   background: #54d2d9;
-   border-radius: 3px;
- }
- #contact form .form-field label::after {
-   position: absolute;
-   right: 15px;
-   top: 1px;
-   margin-top: -6px;
-   border-left: 5px solid transparent;
-   border-right: 5px solid transparent;
-   border-bottom: 5px solid #54d2d9;
-   content: "";
- }
- #contact form ::-webkit-input-placeholder {
-   color: rgba(255, 255, 255, 0.3);
- }
- #contact form :-moz-placeholder {
-   color: rgba(255, 255, 255, 0.3);
-   /* Firefox 18- */
- }
- #contact form ::-moz-placeholder {
-   color: rgba(255, 255, 255, 0.3);
-   /* Firefox 19+ */
- }
- #contact form :-ms-input-placeholder {
-   color: rgba(255, 255, 255, 0.3);
- }
- #contact form .placeholder {
-   color: rgba(255, 255, 255, 0.3) !important;
- }
- 
- #contact input[type="text"],
- #contact input[type="password"],
- #contact input[type="email"],
- #contact textarea {
-   width: 100%;
-   color: rgba(255, 255, 255, 0.6);
-   margin-bottom: 3.6rem;
-   background: rgba(255, 255, 255, 0.1);
- }
- 
- #contact input[type="text"]:focus,
- #contact input[type="password"]:focus,
- #contact input[type="email"]:focus {
-   color: #FFFFFF;
- }
- 
- #contact textarea {
-   min-height: 21rem;
-   padding: 1.8rem 2rem;
- }
- #contact textarea:focus {
-   color: #FFFFFF;
- }
- 
- #contact button.submitform {
-   font-size: 1.5rem;
-   display: block;
-   letter-spacing: .2rem;
-   height: 6rem;
-   line-height: 6rem;
-   padding: 0 3rem;
-   width: 100%;
-   background: #54d2d9;
-   color: #000000;
-   margin-top: .6rem;
- }
- #contact button.submitform:hover, #contact button.submitform:focus {
-   background: #54d2d9;
- }
- 
- #message-warning, #message-success {
-   display: none;
-   background: #000000;
-   padding: 3rem;
-   margin-bottom: 3.6rem;
-   width: 100%;
- }
- 
- #message-warning {
-   color: #D32B2E;
- }
- 
- #message-success {
-   color: #4dfc47;
- }
- 
- #message-warning i,
- #message-success i {
-   margin-right: 10px;
- }
- 
- /* form loader */
- #submit-loader {
-   display: none;
-   position: relative;
-   left: 0;
-   top: 1.8rem;
-   width: 100%;
-   text-align: center;
-   margin-bottom: 4.2rem;
- }
- #submit-loader .text-loader {
-   display: none;
-   font-family: "montserrat-bold", sans-serif;
-   font-size: 1.4rem;
-   color: #FFFFFF;
-   letter-spacing: .2rem;
-   text-transform: uppercase;
- }
- 
- .oldie #submit-loader .s-loader {
-   display: none;
- }
- .oldie #submit-loader .text-loader {
-   display: block;
- }
+
+/* Message me block button */
+.send-email-btn {
+  display: grid;
+  --hov: 0;
+  grid-gap: 0.5em;
+  grid-template-columns: calc(0.375em + var(--hov) * 1em) 1fr;
+  align-items: center;
+  place-self: center;
+  border: solid;
+  padding: 0.75em;
+  border-width: 0.1rem;
+  border-radius: 0;
+  background: color-mix(in hsl, #b5fe83 calc(var(--hov) * 100%), #0000003d);
+  color: #ffffff;
+  font: 700 1.2em/1.375 ubuntu, sans-serif;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: .3rem;
+  transition: grid-template-columns 0.3s ease-out calc((1 - var(--hov)) * 0.5 * 0.3s),
+              background 0.3s,
+              transform 0.2s,
+              box-shadow 0.3s;
+}
+
+.send-email-btn::before {
+  content: "";
+  display: inline-block;
+  aspect-ratio: 1;
+  overflow: hidden;
+  border-radius: 50%;
+  background: #ffffff; /* Fallback background if needed */
+  background-image: url('/static/images/icons/email_icon.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  /* Initially hide the icon */
+  opacity: 0;
+  transition: opacity 0.3s ease-out, transform 0.3s ease-out, filter 0.3s ease-out;
+}
+
+.send-email-btn:is(:hover, :focus) {
+  --hov: 1;
+  background: #54d2d9;
+  color: #151515;
+  transform: translateY(-3px) scale(1.04);
+  box-shadow: 0 6px 24px rgba(84, 210, 217, 0.18);
+}
+
+.send-email-btn:is(:hover, :focus)::before {
+  opacity: 1;
+  transform: translateY(-1px) scale(0.9) rotate(0deg);
+  filter: brightness(1.2) drop-shadow(0 0 2px #fff);
+}
+
+
+ /* Contact Links */
+ .contact_links {
+  color: #ffffff;
+}
+.contact_links:hover, .contact_links:focus {
+  color: #54d2d9;
+}
  
  /* --------------------------------------------------------------- 
   * loader animation - (_layout.scss)
@@ -3405,4 +3323,3 @@
      display: none;
    }
  }
- 

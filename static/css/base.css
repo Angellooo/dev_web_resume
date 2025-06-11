@@ -384,7 +384,8 @@ textarea {
 }
 
 .col-four, .col-1-3 {
-  width: 33.33333%;
+  /* width: 33.33333%; */
+  width: auto;
 }
 
 .col-five {
@@ -396,7 +397,8 @@ textarea {
 }
 
 .col-seven {
-  width: 58.33333%;
+  /* width: 58.33333%; */
+  width: auto;
 }
 
 .col-eight, .col-2-3 {
