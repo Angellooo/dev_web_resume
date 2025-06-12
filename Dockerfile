@@ -18,10 +18,10 @@ COPY . .
 RUN useradd -m appuser
 USER appuser
 
-# Expose port 80 for HTTP traffic
-EXPOSE 80
+# Expose port 5000 to leave ports 80 / 443 free for the Nginx reverse-proxy that will live on the host.
+EXPOSE 5000
 
 # Use Gunicorn as the production WSGI server.
 # This assumes your Flask app is defined in "app.py"
 # with the app instance named "app" (i.e. app = Flask(__name__))
-CMD ["gunicorn", "-b", "0.0.0.0:80", "app:app"]
+CMD ["gunicorn", "-b", "0.0.0.0:5000", "app:app"]

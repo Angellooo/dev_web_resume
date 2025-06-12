@@ -20,6 +20,9 @@ def verify_badge():
     provider = request.args.get('provider')
     badge_id = request.args.get('id')
     certificate_type = request.args.get('certificateType')
+    direct_redirection = request.args.get('directRedirection', 'false').lower() == 'true'
+
+    app.logger.info(f"Received request to verify badge: provider={provider}, badge_id={badge_id}, certificate_type={certificate_type}, direct_redirection={direct_redirection}")
 
     allowed_certificate_type = ['professional', 'specialization', 'course']
 
@@ -58,7 +61,10 @@ def verify_badge():
     url = allowed_providers[provider].format(url_prefix, badge_id)
     app.logger.info(f"Verified badge for provider={provider}, badge_id={badge_id}, certificate_type={certificate_type}, url={url}")
 
-    return jsonify({'url': url})
+    if direct_redirection == True:
+        return redirect(url, code=302)
+    else:
+        return jsonify({'url': url})
     
         # URL Examples
         # https://www.credly.com/badges/a8290c5d-d520-4e79-8a73-8f22fb590f97
