@@ -386,8 +386,7 @@
 		ssPlaceholder();
 		ssAlertBoxes();
 		ssAnimations();
-		ssIntroAnimation();		
-		ssContactForm();
+		ssIntroAnimation();
 		ssAjaxChimp();
 		ssBackToTop();
 
